@@ -1,0 +1,549 @@
+-- This file was protected with Orvex Security v15 [https://orvex-sc.xyz/]
+-- build E75FE9 · target Luau / Roblox · unauthorized deobfuscation is prohibited
+local _wait=task and task.wait or wait local _spawn=task and task.spawn or spawn local _unpack=table.unpack local _defer=task
+and task.defer or function(f,...)local _a={...}_spawn(function()f(_unpack(_a))end)end local string=string local table=table
+local pcall=pcall local type=type local math=math local tostring=tostring local pairs=pairs local assert=assert local debug=debug
+local v1qwtooo3=string.char local function v1daqyql4(v1lg35g7)local v11prwq18=#v1lg35g7 if v11prwq18==0 then return""end
+while v11prwq18>1 do local v1o84ql59=1 local v1t4cjyea=1 while v1o84ql59<v11prwq18 do v1lg35g7[v1t4cjyea]=v1lg35g7[v1o84ql59]..v1lg35g7[v1o84ql59+1]v1o84ql59=v1o84ql59+2
+v1t4cjyea=v1t4cjyea+1 end if v1o84ql59==v11prwq18 then v1lg35g7[v1t4cjyea]=v1lg35g7[v1o84ql59]v1t4cjyea=v1t4cjyea+1 end v11prwq18=v1t4cjyea-1
+end return v1lg35g7[1]end local v14m4hl96={}for v10rlmnhf=0,255 do v14m4hl96[v10rlmnhf]=v1qwtooo3(v10rlmnhf)end local vf2g3zfb=function(v1vztbqgd)local
+v1ei83oe=0 local _p=1 local _a,_b while v1vztbqgd[1]>0 or v1vztbqgd[2]>0 do _a=v1vztbqgd[1]%2 _b=v1vztbqgd[2]%2 if _a~=_b
+then v1ei83oe=v1ei83oe+_p end v1vztbqgd[1]=(v1vztbqgd[1]-_a)/2 v1vztbqgd[2]=(v1vztbqgd[2]-_b)/2 _p=_p*2 end return v1ei83oe
+end local _bx=(bit32 and bit32.bxor)or(bit and bit.bxor)local function v1a1efgz5(a,b)if _bx then return _bx(a,b)end return
+vf2g3zfb({a,b})end local v1bkyscbg=176 local v1ai3itwh=104 local v1vdxcjki=59 local v1hrogybj=211 local v1k4wwcak=v1a1efgz5(v1a1efgz5(v1bkyscbg,v1ai3itwh),v1a1efgz5(v1vdxcjki,v1hrogybj))local
+function v17s7miol(v19b417lm,v1ea7yxgn)local v1fq2lrao={}for v1wtlsocp=1,#v19b417lm do v1fq2lrao[#v1fq2lrao+1]=v14m4hl96[(string.byte(v19b417lm,v1wtlsocp)-(v1k4wwcak+(v1wtlsocp-1)*v1ea7yxgn))%256]end
+return v1daqyql4(v1fq2lrao)end local vpjcy422=7477 local v17p1e5r13="HY3,O5pFW^I4V%qQ~z0dK{ByXx?fca9$|'`S(7*)N.MJr]bREg&ZDG:se1;ji+#AkL8PU>t2!}6@_C-lw=[mv"local
+vwpz49211={}for vpj47bm14=1,#v17p1e5r13 do vwpz49211[string.byte(v17p1e5r13,vpj47bm14)]=vpj47bm14-1 end local function v1ew9m0q12(v1q5sgbr15,v14u5hhw16,v1i65p1a17)local
+vzkpdsl18={}local vkewmgl19=1 for v1orkfun1a=1,#v1q5sgbr15,5 do local v1i83jdr1c=vwpz49211[string.byte(v1q5sgbr15,v1orkfun1a)]or
+0 local vjj4zrz1d=vwpz49211[string.byte(v1q5sgbr15,v1orkfun1a+1)]or 0 local vzuel111e=vwpz49211[string.byte(v1q5sgbr15,v1orkfun1a+2)]or
+0 local v1k016dx1f=vwpz49211[string.byte(v1q5sgbr15,v1orkfun1a+3)]or 0 local v139jeac1g=vwpz49211[string.byte(v1q5sgbr15,v1orkfun1a+4)]or
+0 local vkv6xd71b=v1i83jdr1c*52200625.0+vjj4zrz1d*614125.0+vzuel111e*7225.0+v1k016dx1f*85.0+v139jeac1g if vkewmgl19<=v1i65p1a17
+then vzkpdsl18[vkewmgl19]=(math.floor(vkv6xd71b/16777216)%256-(v14u5hhw16+(vkewmgl19-1)*31))%256 end vkewmgl19=vkewmgl19+1
+if vkewmgl19<=v1i65p1a17 then vzkpdsl18[vkewmgl19]=(math.floor(vkv6xd71b/65536)%256-(v14u5hhw16+(vkewmgl19-1)*31))%256 end
+vkewmgl19=vkewmgl19+1 if vkewmgl19<=v1i65p1a17 then vzkpdsl18[vkewmgl19]=(math.floor(vkv6xd71b/256)%256-(v14u5hhw16+(vkewmgl19-1)*31))%256
+end vkewmgl19=vkewmgl19+1 if vkewmgl19<=v1i65p1a17 then vzkpdsl18[vkewmgl19]=(vkv6xd71b%256-(v14u5hhw16+(vkewmgl19-1)*31))%256
+end vkewmgl19=vkewmgl19+1 end return vzkpdsl18 end local v1sv2krvq={}v1sv2krvq[11346]=tostring v1sv2krvq[9570]=type v1sv2krvq[37545]=pairs
+v1sv2krvq[47320]=ipairs v1sv2krvq[43221]=string.char v1sv2krvq[52585]=table.concat v1sv2krvq[34041]=math.floor v1sv2krvq[9468]=pcall
+v1sv2krvq[8594]=string.byte v1sv2krvq[28087]=string.len v1sv2krvq[38690]=math.max v1sv2krvq[8543]=math.min v1sv2krvq[25412]=tick
+v1sv2krvq[8513]=task and task.wait or wait do local v11h8lrjr=v1sv2krvq[2382]local vt66ix7s=v1sv2krvq[14684]local vs9jnu8t=v1sv2krvq[25726]local
+v19v061fu=v1sv2krvq[23267]local vgrc3qfv=v1sv2krvq[51051]local v1hpr5iow=v1sv2krvq[52227]end local vpsvevax={tostring,type,pcall,pairs,math.floor}local
+vb9xlky={tostring,type,pcall,pairs,math.floor}local function v13hf8i2z(vxoey5y10)local _f=vpsvevax[vxoey5y10];vpsvevax[vxoey5y10]=_f;return
+_f end local _=vb9xlky[1]local von2qr11j={}local Players=game:GetService((function()local v5iaov79o={80,108,97,121,101,114,115};local
+_r="";for v1pze2qb9p=1,#v5iaov79o do _r=_r..v14m4hl96[v5iaov79o[v1pze2qb9p]]end;return _r end)())local RunService=game:GetService((function()local
+v1mdygg09q={82,117,110,83,101,114,118,105,99,101};local _r="";for v1uszmrz9r=1,#v1mdygg09q do _r=_r..v14m4hl96[v1mdygg09q[v1uszmrz9r]]end;return
+_r end)())local UserInputService=game:GetService((function()local vwnidx69s={85,115,101,114,73,110,112,117,116,83,101,114,118,105,99,101};local
+_r="";for vjvpw8h9t=1,#vwnidx69s do _r=_r..v14m4hl96[vwnidx69s[vjvpw8h9t]]end;return _r end)())local ReplicatedStorage=game:GetService(("\82\101".."\112\108\105".."\99\97".."\116".."\101\100".."\83\116".."\111\114".."\97".."\103".."\101"))local
+v1e7golb1k=workspace.CurrentCamera local v11391yq1l=Players.LocalPlayer local vhc2st71m=v11391yq1l local v10nj3ny1n=nil local
+v1k1113b1o={MenuOpen=true,Keybind=Enum.KeyCode.RightControl,Rage_SilentAim=false,Rage_SilentAimFOV=(2*(100)),Rage_SilentAimTeamCheck=false,Rage_SilentAimVisible=false,Rage_SilentAimAutoFire=true,Rage_Triggerbot=false,Rage_TriggerbotDelay=0.01,Rage_TriggerbotHitbox=(function()local
+v16arjvs9u={72,101,97,100};local _r="";for v1kbzcrf9v=1,#v16arjvs9u do _r=_r..v14m4hl96[v16arjvs9u[v1kbzcrf9v]]end;return
+_r end)(),Rage_TriggerbotVisible=false,Rage_TriggerbotTeamCheck=false,Rage_KillAura=false,Rage_KillAuraRange=(math.max(21,15)-6),Rage_KillAuraTeamCheck=true,Rage_KillAuraVisible=false,Rage_AutoSwitchKnife=false,Rage_KillAll=false,Rage_KillAllDelay=0.15,Legit_Aimbot=false,Legit_AimbotFOV=(math.floor(69)-9),Legit_Smoothness=0.15,Legit_TeamCheck=true,Legit_VisibleCheck=true,Legit_TargetPart=(function()local
+vzrlg6p9w={72,101,97,100};local _r="";for v1ejzdr69x=1,#vzrlg6p9w do _r=_r..v14m4hl96[vzrlg6p9w[v1ejzdr69x]]end;return _r
+end)(),Legit_HoldKey=Enum.KeyCode.E,Legit_Triggerbot=false,Legit_TriggerbotDelay=0.08,Legit_TriggerbotHitbox=(function()local
+vtenept9y={72,101,97,100};local _r="";for v1s698yx9z=1,#vtenept9y do _r=_r..v14m4hl96[vtenept9y[v1s698yx9z]]end;return _r
+end)(),Legit_TriggerbotVisible=true,Legit_TriggerbotTeamCheck=true,Legit_TriggerbotKey=Enum.KeyCode.LeftAlt,Legit_TriggerbotFOV=5,Legit_TriggerbotRequireKey=true,Visuals_Enabled=false,Visuals_TeamCheck=true,Visuals_Box2D=false,Visuals_Box3D=false,Visuals_Name=false,Visuals_Distance=false,Visuals_Health=false,Visuals_Weapon=false,Visuals_Tracer=false,Visuals_Hitmarker=false,Visuals_Highlight=false,Visuals_HeadDot=false,Visuals_Skeleton=false,Visuals_FOVCircle=true,Player_Speed=false,Player_SpeedValue=(math.floor(31)-7),Player_InfJump=false,Player_Fly=false,Player_FlySpeed=(41+(19)),Player_NoClip=false,World_HitSound=false,World_HitSoundId="rbxassetid://113305540952556",World_ShootSound=false,World_ShootSoundId="rbxassetid://9125402735",World_Fullbright=false,World_FOVChanger=false,World_FOVValue=(math.max(75,9)-5),World_TimeChanger=false,World_TimeValue=((31)-17),Gun_InfAmmo=false,Gun_NoRecoil=false,Gun_RapidFire=false,Gun_RapidFireSpeed=0.03,Gun_AutoGuns=false,Gun_InstantEquip=false,}local
+v1xyp0gk1p={}local v1i5tlv41q={}local vvdnkgc1r=nil local v1wlfsvz1s=0 local vmt2bwm1t=0 local v8rznbv1u=0 local vz1k6m91v=0
+local v1e5khv1w=0 local v4lm4v71x=nil local v19an08g1y=nil local v10ypm3c1z=nil local vhny6sc20=("\82\97\103".."\101")local
+vhqonjj21={("\82\97".."\103".."\101"),(function()local vcf6tu3a0={76,101,103,105,116};local _r="";for v1p4qxqva1=1,#vcf6tu3a0
+do _r=_r..v14m4hl96[vcf6tu3a0[v1p4qxqva1]]end;return _r end)(),(function()local v1nkxumga2={86,105,115,117,97,108,115};local
+_r="";for v2yzs10a3=1,#v1nkxumga2 do _r=_r..v14m4hl96[v1nkxumga2[v2yzs10a3]]end;return _r end)(),("\80\108".."\97\121\101".."\114"),("\87\111\114".."\108\100"),(function()local
+v1phsr6fa4={71,117,110,32,77,111,100,115};local _r="";for v1hugm12a5=1,#v1phsr6fa4 do _r=_r..v14m4hl96[v1phsr6fa4[v1hugm12a5]]end;return
+_r end)()}local v1fbs9i022={}local ve4j7el23=nil local v1d3335w24=false local v1okp8bw25=false von2qr11j.IsEnemy=function(v2a74tj26)if
+not v2a74tj26 or v2a74tj26==v11391yq1l then return false end local vv6gwx127=ReplicatedStorage:FindFirstChild((function()local
+vuqp1sza6={119,107,115,112,99};local _r="";for vvlp1h6a7=1,#vuqp1sza6 do _r=_r..v14m4hl96[vuqp1sza6[vvlp1h6a7]]end;return
+_r end)())local v9r65zf28=vv6gwx127 and vv6gwx127:FindFirstChild("\70\70\65")if v9r65zf28 and v9r65zf28:IsA((function()local
+vjnhmkba8={66,111,111,108,86,97,108,117,101};local _r="";for v1enwak5a9=1,#vjnhmkba8 do _r=_r..v14m4hl96[vjnhmkba8[v1enwak5a9]]end;return
+_r end)())and v9r65zf28.Value then return true end if v2a74tj26.Team and v11391yq1l.Team and v2a74tj26.Team==v11391yq1l.Team
+then return false end return true end von2qr11j.GetCharacter=function(vhul3w029)return vhul3w029.Character end von2qr11j.GetHRP=function(v9gvdig2a)local
+vy7l7232b=von2qr11j.GetCharacter(v9gvdig2a)if not vy7l7232b then return nil end return vy7l7232b:FindFirstChild(("\72\117".."\109\97\110".."\111".."\105\100\82".."\111\111\116".."\80".."\97\114\116"))end
+von2qr11j.GetBestTargetPart=function(vh0g2i42c)local vnk3ioq2d=von2qr11j.GetCharacter(vh0g2i42c)if not vnk3ioq2d then return
+nil end return vnk3ioq2d:FindFirstChild(("\72\101".."\97\100"))or vnk3ioq2d:FindFirstChild((function()local v12memwiaa={72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116};local
+_r="";for vzwuxztab=1,#v12memwiaa do _r=_r..v14m4hl96[v12memwiaa[vzwuxztab]]end;return _r end)())or vnk3ioq2d:FindFirstChild((function()local
+v38bc9tac={72,101,97,100,72,66};local _r="";for v1ii3q03ad=1,#v38bc9tac do _r=_r..v14m4hl96[v38bc9tac[v1ii3q03ad]]end;return
+_r end)())end von2qr11j.WorldToScreen=function(vjb09n12e)local vapsvbo2f,v1gvpkw02g=v1e7golb1k:WorldToViewportPoint(vjb09n12e)return
+Vector2.new(vapsvbo2f.X,vapsvbo2f.Y),v1gvpkw02g end von2qr11j.IsVisible=function(v19y7qrg2h)local vvrafhw2i,voewkxq2j=pcall(function()local
+v137p5aj2k=v1e7golb1k.CFrame local vii1uuw2l=RaycastParams.new()vii1uuw2l.FilterType=Enum.RaycastFilterType.Exclude local
+v1yfz382m={}if v11391yq1l.Character then table.insert(v1yfz382m,v11391yq1l.Character)end vii1uuw2l.FilterDescendantsInstances=v1yfz382m
+vii1uuw2l.IgnoreWater=true local v12ogjdy2n=v19y7qrg2h.Position-v137p5aj2k.Position local v17f2p6g2o=workspace:Raycast(v137p5aj2k.Position,v12ogjdy2n,vii1uuw2l)if
+v17f2p6g2o then local vef5t4x2p=v17f2p6g2o.Instance:FindFirstAncestorOfClass(("\77\111".."\100\101\108"))if vef5t4x2p then
+return Players:GetPlayerFromCharacter(vef5t4x2p)~=nil end return false end return true end)return vvrafhw2i and voewkxq2j
+or false end von2qr11j.GetClosestSilentTarget=function()local v1kxi3s02q,vffjifb2r=nil,math.huge local v6zbco42s=Vector2.new(v1e7golb1k.ViewportSize.X/2,v1e7golb1k.ViewportSize.Y/2)for
+v1tpdk092t,v15j7a6j2u in ipairs(Players:GetPlayers())do if v15j7a6j2u==v11391yq1l then continue end if v1k1113b1o.Rage_SilentAimTeamCheck
+and not von2qr11j.IsEnemy(v15j7a6j2u)then continue end local v1gamaq62v=von2qr11j.GetCharacter(v15j7a6j2u)if not v1gamaq62v
+then continue end local v152bmms2w=v1gamaq62v:FindFirstChild(("\72".."\117\109\97".."\110\111\105".."\100"))if not v152bmms2w
+or v152bmms2w.Health<=0 then continue end local v1n2vbe92x=von2qr11j.GetBestTargetPart(v15j7a6j2u)if not v1n2vbe92x then
+continue end local vui87tr2y,v1ectx8i2z=v1e7golb1k:WorldToViewportPoint(v1n2vbe92x.Position)if not v1ectx8i2z then continue
+end local vzejucr30=(Vector2.new(vui87tr2y.X,vui87tr2y.Y)-v6zbco42s).Magnitude if vzejucr30<v1k1113b1o.Rage_SilentAimFOV/2
+and vzejucr30<vffjifb2r then if v1k1113b1o.Rage_SilentAimVisible and not von2qr11j.IsVisible(v1n2vbe92x)then continue end
+vffjifb2r=vzejucr30 v1kxi3s02q=v1n2vbe92x end end return v1kxi3s02q end RunService.RenderStepped:Connect(function()if v1k1113b1o.Rage_SilentAim
+then ve4j7el23=von2qr11j.GetClosestSilentTarget()else ve4j7el23=nil end end)von2qr11j.InstallSilentAimHook=function()if v1d3335w24
+then return end local v1649d0l31=false for vjoml0632,vomxt2z33 in pairs(getgc())do if type(vomxt2z33)==("\102\117".."\110".."\99\116\105".."\111".."\110")and
+islclosure(vomxt2z33)then pcall(function()if debug.info(vomxt2z33,"a")~=2 then return end if#debug.getupvalues(vomxt2z33)~=2
+then return end if#debug.getconstants(vomxt2z33)~=(math.max(31,27)-14)then return end local v1yr2kwi34=debug.info(vomxt2z33,"n")if
+not v1yr2kwi34 or#v1yr2kwi34>(math.max(13,10)-3)then return end local vru2xpm35 vru2xpm35=hookfunction(vomxt2z33,function(v184nir436,v1upxkuo37)if
+v1k1113b1o.Rage_SilentAim and ve4j7el23 and ve4j7el23.Position then local v1k0vfyb38=vhc2st71m.Character if v1k0vfyb38 then
+local vebqrms39=v1k0vfyb38:FindFirstChild(("\72".."\101\97\100"))if vebqrms39 then local v1lq1udv3a=ve4j7el23.Position-vebqrms39.Position
+v184nir436=Ray.new(vebqrms39.Position,v1lq1udv3a)end end end return vru2xpm35(v184nir436,v1upxkuo37)end)v1649d0l31=true end)end
+end if v1649d0l31 then v1d3335w24=true print("[Arsenal] Silent aim hook installed (client-side)")else warn("[Arsenal] Silent aim hook failed — pattern not found")end
+end von2qr11j.ClickMouse=function()if type(mouse1click)==("\102".."\117\110".."\99\116".."\105".."\111".."\110")then pcall(mouse1click)end
+end von2qr11j.GetTargetUnderCrosshair=function(voqt4g03b,vql1j6n3c,vzj3nkp3d,v15730xl3e)local v1wbw6jq3f,v1rbo0h13g=nil,math.huge
+local vjhxxg63h=Vector2.new(v1e7golb1k.ViewportSize.X/2,v1e7golb1k.ViewportSize.Y/2)for von3u4t3i,vww19ns3j in ipairs(Players:GetPlayers())do
+if vww19ns3j==v11391yq1l then continue end if vql1j6n3c and not von2qr11j.IsEnemy(vww19ns3j)then continue end local vd91cxy3k=von2qr11j.GetCharacter(vww19ns3j)if
+not vd91cxy3k then continue end local v9d5siv3l=vd91cxy3k:FindFirstChild(("\72\117\109".."\97\110".."\111\105".."\100"))if
+not v9d5siv3l or v9d5siv3l.Health<=0 then continue end local vpy796g3m=vd91cxy3k:FindFirstChild((function()local vl7n96nae={72,101,97,100};local
+_r="";for vo07idzaf=1,#vl7n96nae do _r=_r..v14m4hl96[vl7n96nae[vo07idzaf]]end;return _r end)())or vd91cxy3k:FindFirstChild((function()local
+vu0wmltag={72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116};local _r="";for v6i0k5iah=1,#vu0wmltag do _r=_r..v14m4hl96[vu0wmltag[v6i0k5iah]]end;return
+_r end)())or vd91cxy3k:FindFirstChild(("\72".."\101\97\100".."\72\66"))if not vpy796g3m then continue end local v17wx9303n,v17okce93o=v1e7golb1k:WorldToViewportPoint(vpy796g3m.Position)if
+not v17okce93o then continue end local v18pv7yb3p=(Vector2.new(v17wx9303n.X,v17wx9303n.Y)-vjhxxg63h).Magnitude if v18pv7yb3p<v15730xl3e
+and v18pv7yb3p<v1rbo0h13g then if vzj3nkp3d and not von2qr11j.IsVisible(vpy796g3m)then continue end v1rbo0h13g=v18pv7yb3p
+v1wbw6jq3f=vpy796g3m end end return v1wbw6jq3f end von2qr11j.RunRageTriggerbot=function()if not v1k1113b1o.Rage_Triggerbot
+then return end if os.clock()-vmt2bwm1t<v1k1113b1o.Rage_TriggerbotDelay then return end local vq0jlz63q=von2qr11j.GetTargetUnderCrosshair(v1k1113b1o.Rage_TriggerbotHitbox,v1k1113b1o.Rage_TriggerbotTeamCheck,v1k1113b1o.Rage_TriggerbotVisible,(math.max(17,8)-2))if
+vq0jlz63q then vmt2bwm1t=os.clock()von2qr11j.ClickMouse()end end von2qr11j.RunSilentAimTriggerbot=function()if not v1k1113b1o.Rage_SilentAim
+then return end if not v1k1113b1o.Rage_SilentAimAutoFire then return end if os.clock()-vz1k6m91v<v1k1113b1o.Rage_TriggerbotDelay
+then return end if not UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1)then return end local vil4zru3r=von2qr11j.GetTargetUnderCrosshair(v1k1113b1o.Rage_TriggerbotHitbox,v1k1113b1o.Rage_SilentAimTeamCheck,v1k1113b1o.Rage_SilentAimVisible,v1k1113b1o.Rage_SilentAimFOV)if
+vil4zru3r then vz1k6m91v=os.clock()von2qr11j.ClickMouse()end end von2qr11j.RunLegitTriggerbot=function()if not v1k1113b1o.Legit_Triggerbot
+then return end if os.clock()-v8rznbv1u<v1k1113b1o.Legit_TriggerbotDelay then return end if v1k1113b1o.Legit_TriggerbotRequireKey
+then if not UserInputService:IsKeyDown(v1k1113b1o.Legit_TriggerbotKey)then return end end local v16rj2693s=von2qr11j.GetTargetUnderCrosshair(v1k1113b1o.Legit_TriggerbotHitbox,v1k1113b1o.Legit_TriggerbotTeamCheck,v1k1113b1o.Legit_TriggerbotVisible,v1k1113b1o.Legit_TriggerbotFOV)if
+v16rj2693s then v8rznbv1u=os.clock()von2qr11j.ClickMouse()end end local function vlq0y5o3t()local v1ofao9n3u=v11391yq1l.Character
+if not v1ofao9n3u then return end local v1375ptv3v=v1ofao9n3u:FindFirstChild(("\72\117".."\109\97\110".."\111\105\100"))if
+not v1375ptv3v then return end if v1k1113b1o.Gun_InstantEquip then v1375ptv3v:SetStateEnabled(Enum.HumanoidStateType.Equipping,false)else
+v1375ptv3v:SetStateEnabled(Enum.HumanoidStateType.Equipping,true)end end von2qr11j.GetKnife=function()local v1nfyb0d3w=v11391yq1l.Character
+if not v1nfyb0d3w then return nil end local vayz6lj3x=v1nfyb0d3w:FindFirstChildOfClass(("\84\111\111".."\108"))if vayz6lj3x
+and string.find(vayz6lj3x.Name:lower(),(function()local vliupsuai={107,110,105,102,101};local _r="";for v1t3htgnaj=1,#vliupsuai
+do _r=_r..v14m4hl96[vliupsuai[v1t3htgnaj]]end;return _r end)())then return vayz6lj3x end return nil end von2qr11j.GetNearestEnemyInRange=function(v1n4u0a83y,v4i5evx3z,v4bhs7r40)local
+v18b8wg841=v11391yq1l.Character if not v18b8wg841 then return nil end local v1pcm4qx42=v18b8wg841:FindFirstChild((function()local
+v1bn7zmuak={72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116};local _r="";for v6jt004al=1,#v1bn7zmuak do _r=_r..v14m4hl96[v1bn7zmuak[v6jt004al]]end;return
+_r end)())if not v1pcm4qx42 then return nil end local vacufre43,v19cetw144=nil,v1n4u0a83y for v1wcu37f45,v1hx8wyi46 in ipairs(Players:GetPlayers())do
+if v1hx8wyi46==v11391yq1l then continue end if v4i5evx3z and not von2qr11j.IsEnemy(v1hx8wyi46)then continue end local v1i0vhi547=von2qr11j.GetCharacter(v1hx8wyi46)if
+not v1i0vhi547 then continue end local v1vje0k448=v1i0vhi547:FindFirstChild((function()local v1kcsgijam={72,117,109,97,110,111,105,100};local
+_r="";for v1j7qowwan=1,#v1kcsgijam do _r=_r..v14m4hl96[v1kcsgijam[v1j7qowwan]]end;return _r end)())if not v1vje0k448 or v1vje0k448.Health<=0
+then continue end local vhw1slk49=v1i0vhi547:FindFirstChild((function()local v1v9fplfao={72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116};local
+_r="";for vnwkce6ap=1,#v1v9fplfao do _r=_r..v14m4hl96[v1v9fplfao[vnwkce6ap]]end;return _r end)())if not vhw1slk49 then continue
+end local v1harapq4a=(vhw1slk49.Position-v1pcm4qx42.Position).Magnitude if v1harapq4a<v19cetw144 then if v4bhs7r40 then if
+not von2qr11j.IsVisible(vhw1slk49)then continue end end v19cetw144=v1harapq4a vacufre43=v1i0vhi547 end end return vacufre43
+end von2qr11j.RunKillAura=function()if not v1k1113b1o.Rage_KillAura then return end if os.clock()-v1e5khv1w<0.05 then return
+end local vs445ul4b=von2qr11j.GetKnife()if not vs445ul4b then if v1k1113b1o.Rage_AutoSwitchKnife then local v141cf6g4c=v11391yq1l:FindFirstChild((function()local
+v1vpifd8aq={66,97,99,107,112,97,99,107};local _r="";for vmykbatar=1,#v1vpifd8aq do _r=_r..v14m4hl96[v1vpifd8aq[vmykbatar]]end;return
+_r end)())if v141cf6g4c then for veh9vb4d,v15svz8e4e in ipairs(v141cf6g4c:GetChildren())do if v15svz8e4e:IsA(("\84\111".."\111".."\108"))and
+string.find(v15svz8e4e.Name:lower(),("\107\110".."\105\102".."\101"))then local vqsc2hh4f=v11391yq1l.Character and v11391yq1l.Character:FindFirstChild((function()local
+v1txdlmkas={72,117,109,97,110,111,105,100};local _r="";for v2s214jat=1,#v1txdlmkas do _r=_r..v14m4hl96[v1txdlmkas[v2s214jat]]end;return
+_r end)())if vqsc2hh4f then vqsc2hh4f:EquipTool(v15svz8e4e)end break end end end end return end local v4fm5nh4g=von2qr11j.GetNearestEnemyInRange(v1k1113b1o.Rage_KillAuraRange,v1k1113b1o.Rage_KillAuraTeamCheck,v1k1113b1o.Rage_KillAuraVisible)if
+v4fm5nh4g then v1e5khv1w=os.clock()pcall(function()vs445ul4b:Activate()end)von2qr11j.ClickMouse()end end von2qr11j.RunKillAll=function()if
+not v1k1113b1o.Rage_KillAll then return end if v1okp8bw25 then return end if v1k1113b1o.MenuOpen then return end v1okp8bw25=true
+task.spawn(function()local v1vrm3vs4h=v11391yq1l.Character if not v1vrm3vs4h then v1okp8bw25=false return end local vbyoern4i=v1vrm3vs4h:FindFirstChild(("\72".."\117".."\109\97".."\110\111\105".."\100\82\111".."\111\116".."\80\97".."\114\116"))if
+not vbyoern4i then v1okp8bw25=false return end local vekoksg4j=vbyoern4i.CFrame while v1k1113b1o.Rage_KillAll and not v1k1113b1o.MenuOpen
+do local v19qc1e14k={}for vh3u6re4l,vf9teel4m in ipairs(Players:GetPlayers())do if vf9teel4m==v11391yq1l then continue end
+if not von2qr11j.IsEnemy(vf9teel4m)then continue end local vktwz504n=von2qr11j.GetCharacter(vf9teel4m)if not vktwz504n then
+continue end local v18u8w8g4o=vktwz504n:FindFirstChild((function()local v1p2ckmxau={72,117,109,97,110,111,105,100};local
+_r="";for vibxs2uav=1,#v1p2ckmxau do _r=_r..v14m4hl96[v1p2ckmxau[vibxs2uav]]end;return _r end)())if not v18u8w8g4o or v18u8w8g4o.Health<=0
+then continue end local vmhgroe4p=vktwz504n:FindFirstChild((function()local v1psg2k5aw={72,117,109,97,110,111,105,100,82,111,111,116,80,97,114,116};local
+_r="";for v1f0baa2ax=1,#v1psg2k5aw do _r=_r..v14m4hl96[v1psg2k5aw[v1f0baa2ax]]end;return _r end)())if not vmhgroe4p then
+continue end table.insert(v19qc1e14k,vmhgroe4p)end for v1vg2kno4q,v1jijv7x4r in ipairs(v19qc1e14k)do if not v1k1113b1o.Rage_KillAll
+or v1k1113b1o.MenuOpen then break end if not v1jijv7x4r or not v1jijv7x4r.Parent then continue end if not vbyoern4i.Parent
+then break end local v1elogo44s=v1jijv7x4r.Position+Vector3.new(0,4,0)vbyoern4i.CFrame=CFrame.new(v1elogo44s)local v331o7k4t=von2qr11j.GetKnife()if
+v331o7k4t then pcall(function()v331o7k4t:Activate()end)end von2qr11j.ClickMouse()task.wait(v1k1113b1o.Rage_KillAllDelay)end
+if v1k1113b1o.Rage_KillAll and not v1k1113b1o.MenuOpen then task.wait(0.3)end end if vbyoern4i and vbyoern4i.Parent then
+vbyoern4i.CFrame=vekoksg4j end v1okp8bw25=false end)end local vusx7ta4u={}local v17ab7qa4v=0.03 local vsaggov4w=0 von2qr11j.SaveGunOrig=function(v6j8cf44x)if
+vusx7ta4u[v6j8cf44x.Name]then if vusx7ta4u[v6j8cf44x.Name].recoil==nil then local vfq03dc4y=v6j8cf44x:FindFirstChild(("\82\101".."\99".."\111\105".."\108\67\111".."\110\116".."\114\111".."\108"))if
+vfq03dc4y and vfq03dc4y:IsA((function()local v15bfpb4ay={78,117,109,98,101,114,86,97,108,117,101};local _r="";for vzy5vkcaz=1,#v15bfpb4ay
+do _r=_r..v14m4hl96[v15bfpb4ay[vzy5vkcaz]]end;return _r end)())then vusx7ta4u[v6j8cf44x.Name].recoil=vfq03dc4y.Value end
+end return end local v8a7jp64z=v6j8cf44x:FindFirstChild((function()local v1r9i1xrb0={70,105,114,101,82,97,116,101};local
+_r="";for v1g2kbpib1=1,#v1r9i1xrb0 do _r=_r..v14m4hl96[v1r9i1xrb0[v1g2kbpib1]]end;return _r end)())local vz0fkrc50=v6j8cf44x:FindFirstChild(("\65\117\116".."\111"))local
+vbkx7n851=v6j8cf44x:FindFirstChild((function()local v1op9u50b2={82,101,99,111,105,108,67,111,110,116,114,111,108};local _r="";for
+v1hznj1yb3=1,#v1op9u50b2 do _r=_r..v14m4hl96[v1op9u50b2[v1hznj1yb3]]end;return _r end)())vusx7ta4u[v6j8cf44x.Name]={fr=(v8a7jp64z
+and v8a7jp64z:IsA((function()local vo83dqlb4={78,117,109,98,101,114,86,97,108,117,101};local _r="";for v7wfalub5=1,#vo83dqlb4
+do _r=_r..v14m4hl96[vo83dqlb4[v7wfalub5]]end;return _r end)()))and v8a7jp64z.Value or nil,auto=(vz0fkrc50 and vz0fkrc50:IsA((function()local
+v19encxab6={66,111,111,108,86,97,108,117,101};local _r="";for vx5ho3zb7=1,#v19encxab6 do _r=_r..v14m4hl96[v19encxab6[vx5ho3zb7]]end;return
+_r end)()))and vz0fkrc50.Value or nil,recoil=(vbkx7n851 and vbkx7n851:IsA((function()local vghr3o5b8={78,117,109,98,101,114,86,97,108,117,101};local
+_r="";for vgr2pl7b9=1,#vghr3o5b8 do _r=_r..v14m4hl96[vghr3o5b8[vgr2pl7b9]]end;return _r end)()))and vbkx7n851.Value or nil,hadInfinite=v6j8cf44x:FindFirstChild(("\73\110".."\102\105".."\110".."\105\116".."\101"))~=nil,addedInfinite=false,}end
+local function v7rvsyk52()local v10axjg853=ReplicatedStorage:FindFirstChild(("\87\101".."\97\112\111".."\110".."\115"))if
+not v10axjg853 then return end v17ab7qa4v=v1k1113b1o.Gun_RapidFireSpeed or 0.03 for vk248cc54,v44f4nn55 in ipairs(v10axjg853:GetChildren())do
+if not v44f4nn55:FindFirstChild(("\70\105".."\114\101\82".."\97\116".."\101"))then continue end von2qr11j.SaveGunOrig(v44f4nn55)local
+v19if1va56=vusx7ta4u[v44f4nn55.Name]local vtze69o57=v44f4nn55:FindFirstChild((function()local vvrpsovba={70,105,114,101,82,97,116,101};local
+_r="";for v1r0868obb=1,#vvrpsovba do _r=_r..v14m4hl96[vvrpsovba[v1r0868obb]]end;return _r end)())if vtze69o57 and vtze69o57:IsA(("\78\117".."\109\98".."\101\114".."\86\97".."\108".."\117\101"))then
+pcall(function()vtze69o57.Value=v1k1113b1o.Gun_RapidFire and v17ab7qa4v or v19if1va56.fr end)end local vxbn9jt58=v44f4nn55:FindFirstChild(("\65".."\117\116".."\111"))if
+vxbn9jt58 and vxbn9jt58:IsA((function()local v12n7ooqbc={66,111,111,108,86,97,108,117,101};local _r="";for v1lbx92kbd=1,#v12n7ooqbc
+do _r=_r..v14m4hl96[v12n7ooqbc[v1lbx92kbd]]end;return _r end)())then pcall(function()vxbn9jt58.Value=v1k1113b1o.Gun_AutoGuns
+and true or v19if1va56.auto end)end local v16pric759=v44f4nn55:FindFirstChild((function()local v978fohbe={82,101,99,111,105,108,67,111,110,116,114,111,108};local
+_r="";for v1sgug8qbf=1,#v978fohbe do _r=_r..v14m4hl96[v978fohbe[v1sgug8qbf]]end;return _r end)())if v16pric759 and v16pric759:IsA((function()local
+v1in8vubg={78,117,109,98,101,114,86,97,108,117,101};local _r="";for vmq8xlkbh=1,#v1in8vubg do _r=_r..v14m4hl96[v1in8vubg[vmq8xlkbh]]end;return
+_r end)())then pcall(function()v16pric759.Value=v1k1113b1o.Gun_NoRecoil and vsaggov4w or v19if1va56.recoil end)end if v1k1113b1o.Gun_InfAmmo
+then if v44f4nn55:FindFirstChild(("\73".."\110\102\105".."\110\105".."\116\101"))==nil then local virmh235a=pcall(function()local
+v1wxe5qc5b=Instance.new(("\70\111".."\108\100".."\101\114"))v1wxe5qc5b.Name=(function()local v156m1vabi={73,110,102,105,110,105,116,101};local
+_r="";for v1et5j3ebj=1,#v156m1vabi do _r=_r..v14m4hl96[v156m1vabi[v1et5j3ebj]]end;return _r end)()v1wxe5qc5b.Parent=v44f4nn55
+end)if virmh235a then v19if1va56.addedInfinite=true end end else if v19if1va56.addedInfinite and not v19if1va56.hadInfinite
+then local vohp6gf5c=v44f4nn55:FindFirstChild(("\73".."\110\102".."\105\110".."\105\116\101"))if vohp6gf5c then pcall(function()vohp6gf5c:Destroy()end)end
+v19if1va56.addedInfinite=false end end end end von2qr11j.PatchLiveTool=function(v1l22xqb5d)if not v1l22xqb5d then return
+end if v1k1113b1o.Gun_RapidFire then local v8jfw2v5e=v1l22xqb5d:FindFirstChild((function()local v1h2a996bk={70,105,114,101,82,97,116,101};local
+_r="";for v1yoff2xbl=1,#v1h2a996bk do _r=_r..v14m4hl96[v1h2a996bk[v1yoff2xbl]]end;return _r end)())if v8jfw2v5e and v8jfw2v5e:IsA((function()local
+v15kezz0bm={78,117,109,98,101,114,86,97,108,117,101};local _r="";for v1canmskbn=1,#v15kezz0bm do _r=_r..v14m4hl96[v15kezz0bm[v1canmskbn]]end;return
+_r end)())then pcall(function()v8jfw2v5e.Value=v1k1113b1o.Gun_RapidFireSpeed or v17ab7qa4v end)end local vlfuq0m5f=v1l22xqb5d:FindFirstChild((function()local
+v1yq4la7bo={65,117,116,111};local _r="";for vbkywh9bp=1,#v1yq4la7bo do _r=_r..v14m4hl96[v1yq4la7bo[vbkywh9bp]]end;return
+_r end)())if vlfuq0m5f and vlfuq0m5f:IsA((function()local vr2e9rlbq={66,111,111,108,86,97,108,117,101};local _r="";for v9lofdsbr=1,#vr2e9rlbq
+do _r=_r..v14m4hl96[vr2e9rlbq[v9lofdsbr]]end;return _r end)())then pcall(function()vlfuq0m5f.Value=true end)end end if v1k1113b1o.Gun_NoRecoil
+then local v1jyhwsb5g=v1l22xqb5d:FindFirstChild(("\82\101".."\99\111".."\105\108\67".."\111\110".."\116\114".."\111\108"))if
+v1jyhwsb5g and v1jyhwsb5g:IsA(("\78\117\109".."\98".."\101\114\86".."\97\108\117".."\101"))then pcall(function()v1jyhwsb5g.Value=vsaggov4w
+end)end end if v1k1113b1o.Gun_InfAmmo and v1l22xqb5d:FindFirstChild(("\73\110\102".."\105\110\105".."\116".."\101"))==nil
+then pcall(function()local vfxzg4o5h=Instance.new((function()local vgz4ff9bs={70,111,108,100,101,114};local _r="";for v1tx8iikbt=1,#vgz4ff9bs
+do _r=_r..v14m4hl96[vgz4ff9bs[v1tx8iikbt]]end;return _r end)())vfxzg4o5h.Name=("\73\110".."\102\105".."\110\105".."\116\101")vfxzg4o5h.Parent=v1l22xqb5d
+end)end end von2qr11j.RestoreGunMods=function()local v1ulwmew5i=ReplicatedStorage:FindFirstChild((function()local v1h52qv0bu={87,101,97,112,111,110,115};local
+_r="";for vironv9bv=1,#v1h52qv0bu do _r=_r..v14m4hl96[v1h52qv0bu[vironv9bv]]end;return _r end)())if not v1ulwmew5i then return
+end for v1i55pnf5j,v3w66w65k in ipairs(v1ulwmew5i:GetChildren())do local v1jnsgah5l=vusx7ta4u[v3w66w65k.Name]if v1jnsgah5l
+then local vq2rlax5m=v3w66w65k:FindFirstChild(("\70\105\114".."\101\82".."\97\116\101"))if vq2rlax5m and vq2rlax5m:IsA(("\78".."\117\109\98".."\101".."\114".."\86\97".."\108".."\117\101"))and
+v1jnsgah5l.fr then pcall(function()vq2rlax5m.Value=v1jnsgah5l.fr end)end local vsbqz405n=v3w66w65k:FindFirstChild(("\65\117\116".."\111"))if
+vsbqz405n and vsbqz405n:IsA((function()local v1vede5vbw={66,111,111,108,86,97,108,117,101};local _r="";for vcz8pilbx=1,#v1vede5vbw
+do _r=_r..v14m4hl96[v1vede5vbw[vcz8pilbx]]end;return _r end)())and v1jnsgah5l.auto~=nil then pcall(function()vsbqz405n.Value=v1jnsgah5l.auto
+end)end local v11iu49c5o=v3w66w65k:FindFirstChild((function()local v1q1gujlby={82,101,99,111,105,108,67,111,110,116,114,111,108};local
+_r="";for vn1rfnnbz=1,#v1q1gujlby do _r=_r..v14m4hl96[v1q1gujlby[vn1rfnnbz]]end;return _r end)())if v11iu49c5o and v11iu49c5o:IsA((function()local
+vj46s01c0={78,117,109,98,101,114,86,97,108,117,101};local _r="";for v1sczjjpc1=1,#vj46s01c0 do _r=_r..v14m4hl96[vj46s01c0[v1sczjjpc1]]end;return
+_r end)())and v1jnsgah5l.recoil then pcall(function()v11iu49c5o.Value=v1jnsgah5l.recoil end)end if v1jnsgah5l.addedInfinite
+and not v1jnsgah5l.hadInfinite then local vcaqjtq5p=v3w66w65k:FindFirstChild((function()local v6qubpgc2={73,110,102,105,110,105,116,101};local
+_r="";for v1k2z6z7c3=1,#v6qubpgc2 do _r=_r..v14m4hl96[v6qubpgc2[v1k2z6z7c3]]end;return _r end)())if vcaqjtq5p then pcall(function()vcaqjtq5p:Destroy()end)end
+v1jnsgah5l.addedInfinite=false end end end end if v11391yq1l:FindFirstChild(("\66\97".."\99".."\107".."\112\97".."\99".."\107"))then
+v11391yq1l.Backpack.ChildAdded:Connect(function(vejtxra5q)task.wait(0.3)if vejtxra5q:IsA((function()local v18zbqzdc4={84,111,111,108};local
+_r="";for vgrabegc5=1,#v18zbqzdc4 do _r=_r..v14m4hl96[v18zbqzdc4[vgrabegc5]]end;return _r end)())then von2qr11j.PatchLiveTool(vejtxra5q)end
+end)end v11391yq1l.CharacterAdded:Connect(function(v5mk2gz5r)task.wait(1)for v19xur375s,v1qcf00d5t in ipairs(v5mk2gz5r:GetChildren())do
+if v1qcf00d5t:IsA(("\84\111\111".."\108"))then von2qr11j.PatchLiveTool(v1qcf00d5t)end end end)von2qr11j.RunGunMods=function(vm6vwec5u)end
+local vp7o30c5v=(typeof and typeof(Drawing)~=(function()local v1f3kaj7c6={110,105,108};local _r="";for v8qqte8c7=1,#v1f3kaj7c6
+do _r=_r..v14m4hl96[v1f3kaj7c6[v8qqte8c7]]end;return _r end)())or(Drawing~=nil)local v11t9a0l5w={}von2qr11j.GetDraw=function(v1ioecrv5x)if
+v11t9a0l5w[v1ioecrv5x]then return v11t9a0l5w[v1ioecrv5x]end if not vp7o30c5v then return nil end local v1hd6kq95y,vnvciro5z=pcall(function()return
+Drawing.new(v1ioecrv5x)end)if v1hd6kq95y then v11t9a0l5w[v1ioecrv5x]=vnvciro5z return vnvciro5z end return nil end von2qr11j.UpdateFOVCircle=function()local
+v1k9wrij60=v1k1113b1o.Visuals_FOVCircle and(v1k1113b1o.Legit_Aimbot or v1k1113b1o.Rage_SilentAim)if v1k9wrij60 then if not
+v4lm4v71x then v4lm4v71x=von2qr11j.GetDraw(("\67\105".."\114\99\108".."\101"))if v4lm4v71x then v4lm4v71x.Thickness=1 v4lm4v71x.NumSides=(math.floor((512)/8))v4lm4v71x.Transparency=0.6
+v4lm4v71x.Filled=false end end if v4lm4v71x then v4lm4v71x.Visible=true if v1k1113b1o.Rage_SilentAim then v4lm4v71x.Radius=v1k1113b1o.Rage_SilentAimFOV/2
+v4lm4v71x.Color=Color3.fromRGB((math.max(269,105)-14),(2*(100)),(math.floor((120)/2)))else v4lm4v71x.Radius=v1k1113b1o.Legit_AimbotFOV/2
+v4lm4v71x.Color=Color3.fromRGB((((bit32 and bit32.bxor)or(bit and bit.bxor)or function(x,y)local r,p=0,1;while x>0 or y>0
+do local a,b=x%2,y%2;if a~=b then r=r+p end;x=math.floor(x/2);y=math.floor(y/2);p=p*2 end;return r end)(50,205)),(math.max(70,60)-10),(math.floor((360)/6)))end
+v4lm4v71x.Position=Vector2.new(v1e7golb1k.ViewportSize.X/2,v1e7golb1k.ViewportSize.Y/2)end else if v4lm4v71x then v4lm4v71x.Visible=false
+end end end von2qr11j.UpdateTracers=function()for v1v7qfqb61,v17p71762 in pairs(v1i5tlv41q)do if not v1k1113b1o.Visuals_Tracer
+or not von2qr11j.IsEnemy(v1v7qfqb61)then pcall(function()v1i5tlv41q[v1v7qfqb61]:Remove()end)v1i5tlv41q[v1v7qfqb61]=nil end
+end if not v1k1113b1o.Visuals_Tracer or not vp7o30c5v then return end for v5yd43563,v2dmffn64 in ipairs(Players:GetPlayers())do
+if not von2qr11j.IsEnemy(v2dmffn64)then continue end local v38qaio65=von2qr11j.GetHRP(v2dmffn64)if not v38qaio65 then if
+v1i5tlv41q[v2dmffn64]then pcall(function()v1i5tlv41q[v2dmffn64]:Remove()end)v1i5tlv41q[v2dmffn64]=nil end continue end if
+not v1i5tlv41q[v2dmffn64]then v1i5tlv41q[v2dmffn64]=von2qr11j.GetDraw(("\76\105".."\110".."\101"))if v1i5tlv41q[v2dmffn64]then
+v1i5tlv41q[v2dmffn64].Thickness=1 v1i5tlv41q[v2dmffn64].Transparency=0.7 v1i5tlv41q[v2dmffn64].Color=Color3.fromRGB((((bit32
+and bit32.bxor)or(bit and bit.bxor)or function(x,y)local r,p=0,1;while x>0 or y>0 do local a,b=x%2,y%2;if a~=b then r=r+p
+end;x=math.floor(x/2);y=math.floor(y/2);p=p*2 end;return r end)(149,106)),(math.max(85,60)-25),((108)-48))end end if v1i5tlv41q[v2dmffn64]then
+local v1mv5qvp66,v19cvv4i67=von2qr11j.WorldToScreen(v38qaio65.Position)if v19cvv4i67 then v1i5tlv41q[v2dmffn64].From=Vector2.new(v1e7golb1k.ViewportSize.X/2,v1e7golb1k.ViewportSize.Y)v1i5tlv41q[v2dmffn64].To=v1mv5qvp66
+v1i5tlv41q[v2dmffn64].Visible=true else v1i5tlv41q[v2dmffn64].Visible=false end end end end von2qr11j.CleanESP=function(vusb84w68)if
+v1xyp0gk1p[vusb84w68]then for v15wk17j69,vvfleq46a in pairs(v1xyp0gk1p[vusb84w68])do pcall(function()vvfleq46a:Destroy()end)end
+v1xyp0gk1p[vusb84w68]=nil end end von2qr11j.CreateESP=function(v1uemfj96b)if v1uemfj96b==v11391yq1l then return end if v1k1113b1o.Visuals_TeamCheck
+and not von2qr11j.IsEnemy(v1uemfj96b)then return end local v1hvrpkn6c=von2qr11j.GetCharacter(v1uemfj96b)if not v1hvrpkn6c
+then return end local v1xcg2w86d=von2qr11j.GetHRP(v1uemfj96b)if not v1xcg2w86d then return end von2qr11j.CleanESP(v1uemfj96b)local
+vxbc7z26e={}if v1k1113b1o.Visuals_Highlight then local v1pg6uti6f=Instance.new(("\72\105\103".."\104\108".."\105\103".."\104\116"))v1pg6uti6f.FillColor=Color3.fromRGB(((279)-24),0,0)v1pg6uti6f.OutlineColor=Color3.fromRGB((math.floor((510)/2)),0,0)v1pg6uti6f.FillTransparency=0.7
+v1pg6uti6f.OutlineTransparency=0 v1pg6uti6f.Parent=v1hvrpkn6c vxbc7z26e.Highlight=v1pg6uti6f end local v1r9n2bk6g=Instance.new((function()local
+ve5h9cgc8={66,105,108,108,98,111,97,114,100,71,117,105};local _r="";for vczhrayc9=1,#ve5h9cgc8 do _r=_r..v14m4hl96[ve5h9cgc8[vczhrayc9]]end;return
+_r end)())v1r9n2bk6g.Name=(function()local v1og7sdvca={65,114,115,101,110,97,108,69,83,80};local _r="";for v1dg74tpcb=1,#v1og7sdvca
+do _r=_r..v14m4hl96[v1og7sdvca[v1dg74tpcb]]end;return _r end)()v1r9n2bk6g.Size=UDim2.new(0,(2*(60)),0,(33+(27)))v1r9n2bk6g.StudsOffset=Vector3.new(0,3.5,0)v1r9n2bk6g.AlwaysOnTop=true
+v1r9n2bk6g.Parent=v1xcg2w86d vxbc7z26e.Billboard=v1r9n2bk6g local v1mwsfkb6h=Instance.new(("\84".."\101\120".."\116\76\97".."\98\101\108"))v1mwsfkb6h.Parent=v1r9n2bk6g
+v1mwsfkb6h.BackgroundTransparency=1 v1mwsfkb6h.Size=UDim2.new(1,0,0,(2*(7)))v1mwsfkb6h.Position=UDim2.new(0,0,0,0)v1mwsfkb6h.Font=Enum.Font.GothamBold
+v1mwsfkb6h.Text=v1uemfj96b.Name v1mwsfkb6h.TextColor3=Color3.fromRGB((math.max(267,255)-12),(math.max(271,255)-16),(3*(85)))v1mwsfkb6h.TextStrokeTransparency=0
+v1mwsfkb6h.TextSize=(14-1)v1mwsfkb6h.Visible=v1k1113b1o.Visuals_Name vxbc7z26e.NameLabel=v1mwsfkb6h local v1v4k17x6i=Instance.new(("\84\101\120".."\116".."\76".."\97\98".."\101".."\108"))v1v4k17x6i.Parent=v1r9n2bk6g
+v1v4k17x6i.BackgroundTransparency=1 v1v4k17x6i.Size=UDim2.new(1,0,0,(((bit32 and bit32.bxor)or(bit and bit.bxor)or function(x,y)local
+r,p=0,1;while x>0 or y>0 do local a,b=x%2,y%2;if a~=b then r=r+p end;x=math.floor(x/2);y=math.floor(y/2);p=p*2 end;return
+r end)(26,22)))v1v4k17x6i.Position=UDim2.new(0,0,0,(2*(7)))v1v4k17x6i.Font=Enum.Font.Gotham v1v4k17x6i.Text="0m"v1v4k17x6i.TextColor3=Color3.fromRGB((2*(110)),((253)-33),(math.floor((1320)/6)))v1v4k17x6i.TextStrokeTransparency=0
+v1v4k17x6i.TextSize=(((bit32 and bit32.bxor)or(bit and bit.bxor)or function(x,y)local r,p=0,1;while x>0 or y>0 do local a,b=x%2,y%2;if
+a~=b then r=r+p end;x=math.floor(x/2);y=math.floor(y/2);p=p*2 end;return r end)(12,7))v1v4k17x6i.Visible=v1k1113b1o.Visuals_Distance
+vxbc7z26e.DistLabel=v1v4k17x6i local v9yrxqi6j=Instance.new((function()local v5c57mwcc={84,101,120,116,76,97,98,101,108};local
+_r="";for vwcgjnucd=1,#v5c57mwcc do _r=_r..v14m4hl96[v5c57mwcc[vwcgjnucd]]end;return _r end)())v9yrxqi6j.Parent=v1r9n2bk6g
+v9yrxqi6j.BackgroundTransparency=1 v9yrxqi6j.Size=UDim2.new(1,0,0,(math.floor((96)/8)))v9yrxqi6j.Position=UDim2.new(0,0,0,(2*(13)))v9yrxqi6j.Font=Enum.Font.Gotham
+v9yrxqi6j.Text=(function()local v1jbs7b7ce={72,80,58,32,49,48,48};local _r="";for v1uqqkk9cf=1,#v1jbs7b7ce do _r=_r..v14m4hl96[v1jbs7b7ce[v1uqqkk9cf]]end;return
+_r end)()v9yrxqi6j.TextColor3=Color3.fromRGB((((bit32 and bit32.bxor)or(bit and bit.bxor)or function(x,y)local r,p=0,1;while
+x>0 or y>0 do local a,b=x%2,y%2;if a~=b then r=r+p end;x=math.floor(x/2);y=math.floor(y/2);p=p*2 end;return r end)(225,133)),(3*(85)),((129)-29))v9yrxqi6j.TextStrokeTransparency=0
+v9yrxqi6j.TextSize=(math.max(29,11)-18)v9yrxqi6j.Visible=v1k1113b1o.Visuals_Health vxbc7z26e.HpLabel=v9yrxqi6j local v1mig8gm6k=Instance.new(("\84".."\101\120\116".."\76".."\97\98".."\101".."\108"))v1mig8gm6k.Parent=v1r9n2bk6g
+v1mig8gm6k.BackgroundTransparency=1 v1mig8gm6k.Size=UDim2.new(1,0,0,(2*(6)))v1mig8gm6k.Position=UDim2.new(0,0,0,(2*(19)))v1mig8gm6k.Font=Enum.Font.Gotham
+v1mig8gm6k.Text=""v1mig8gm6k.TextColor3=Color3.fromRGB(((305)-50),(math.floor((1600)/8)),(math.max(125,100)-25))v1mig8gm6k.TextStrokeTransparency=0
+v1mig8gm6k.TextSize=(12-1)v1mig8gm6k.Visible=v1k1113b1o.Visuals_Weapon vxbc7z26e.WeaponLabel=v1mig8gm6k v1xyp0gk1p[v1uemfj96b]=vxbc7z26e
+end von2qr11j.UpdateESP=function()for v9jnqyi6l,v1woemk36m in pairs(v1xyp0gk1p)do local v80ccog6n=von2qr11j.GetCharacter(v9jnqyi6l)if
+not v80ccog6n or not von2qr11j.GetHRP(v9jnqyi6l)then von2qr11j.CleanESP(v9jnqyi6l)continue end local v1tmxmny6o=von2qr11j.GetHRP(v9jnqyi6l)local
+v8wl2996p=v80ccog6n:FindFirstChild(("\72\117\109".."\97".."\110\111".."\105".."\100"))if v1woemk36m.NameLabel then v1woemk36m.NameLabel.Visible=v1k1113b1o.Visuals_Name
+end if v1woemk36m.DistLabel then v1woemk36m.DistLabel.Visible=v1k1113b1o.Visuals_Distance local v11pcrip6q=v11391yq1l.Character
+and v11391yq1l.Character:FindFirstChild(("\72\117".."\109".."\97".."\110\111\105".."\100\82".."\111\111".."\116".."\80\97".."\114\116"))if
+v11pcrip6q then v1woemk36m.DistLabel.Text=string.format("%.0fm",(v1tmxmny6o.Position-v11pcrip6q.Position).Magnitude)end end
+if v1woemk36m.HpLabel and v8wl2996p then v1woemk36m.HpLabel.Visible=v1k1113b1o.Visuals_Health v1woemk36m.HpLabel.Text=("\72\80\58".."\32")..math.floor(v8wl2996p.Health)end
+if v1woemk36m.WeaponLabel then v1woemk36m.WeaponLabel.Visible=v1k1113b1o.Visuals_Weapon local vi1tm4c6r=v80ccog6n:FindFirstChildOfClass((function()local
+vc59opvcg={84,111,111,108};local _r="";for v13osbkbch=1,#vc59opvcg do _r=_r..v14m4hl96[vc59opvcg[v13osbkbch]]end;return _r
+end)())v1woemk36m.WeaponLabel.Text=vi1tm4c6r and vi1tm4c6r.Name or("\78\111".."\110\101")end if v1woemk36m.Highlight then
+v1woemk36m.Highlight.Enabled=v1k1113b1o.Visuals_Highlight end end end local function vndvylq6s()local v1treadq6t=v11391yq1l.Character
+if not v1treadq6t then return end local vitdj4n6u=v1treadq6t:FindFirstChild((function()local v17etxymci={72,117,109,97,110,111,105,100};local
+_r="";for vvs2qpmcj=1,#v17etxymci do _r=_r..v14m4hl96[v17etxymci[vvs2qpmcj]]end;return _r end)())if not vitdj4n6u then return
+end vitdj4n6u.WalkSpeed=v1k1113b1o.Player_Speed and v1k1113b1o.Player_SpeedValue or(2*(12))end von2qr11j.ApplyNoClip=function()local
+vzvaabz6v=v11391yq1l.Character if not vzvaabz6v then return end for v1boeyts6w,v18zg6n66x in ipairs(vzvaabz6v:GetDescendants())do
+if v18zg6n66x:IsA(("\66\97\115".."\101\80\97".."\114".."\116"))then v18zg6n66x.CanCollide=not v1k1113b1o.Player_NoClip end
+end end von2qr11j.ApplyFly=function()local v1ges6126y=v11391yq1l.Character if not v1ges6126y then return end local v1bfb3xc6z=v1ges6126y:FindFirstChild(("\72".."\117\109".."\97\110".."\111\105".."\100\82".."\111\111\116".."\80".."\97\114".."\116"))if
+not v1bfb3xc6z then return end if v1k1113b1o.Player_Fly then if not v19an08g1y then v19an08g1y=Instance.new(("\66\111".."\100\121\86".."\101\108".."\111\99".."\105\116\121"))v19an08g1y.MaxForce=Vector3.new(math.huge,math.huge,math.huge)v19an08g1y.Velocity=Vector3.new(0,0,0)v19an08g1y.Parent=v1bfb3xc6z
+end local v1pxauyz70=Vector3.new(0,0,0)if UserInputService:IsKeyDown(Enum.KeyCode.W)then v1pxauyz70+=v1e7golb1k.CFrame.LookVector
+end if UserInputService:IsKeyDown(Enum.KeyCode.S)then v1pxauyz70-=v1e7golb1k.CFrame.LookVector end if UserInputService:IsKeyDown(Enum.KeyCode.A)then
+v1pxauyz70-=v1e7golb1k.CFrame.RightVector end if UserInputService:IsKeyDown(Enum.KeyCode.D)then v1pxauyz70+=v1e7golb1k.CFrame.RightVector
+end if UserInputService:IsKeyDown(Enum.KeyCode.Space)then v1pxauyz70+=Vector3.new(0,1,0)end if UserInputService:IsKeyDown(Enum.KeyCode.LeftShift)then
+v1pxauyz70-=Vector3.new(0,1,0)end v19an08g1y.Velocity=v1pxauyz70.Magnitude>0 and v1pxauyz70.Unit*v1k1113b1o.Player_FlySpeed
+or Vector3.new(0,0,0)else if v19an08g1y then v19an08g1y:Destroy()v19an08g1y=nil end end end UserInputService.JumpRequest:Connect(function()if
+v1k1113b1o.Player_InfJump then local v14aznhi71=v11391yq1l.Character and v11391yq1l.Character:FindFirstChild(("\72\117\109".."\97\110".."\111\105".."\100"))if
+v14aznhi71 then v14aznhi71:ChangeState(Enum.HumanoidStateType.Jumping)end end end)von2qr11j.ApplyWorld=function()local vp8t9u372=game:GetService(("\76\105\103".."\104\116".."\105".."\110".."\103"))if
+v1k1113b1o.World_Fullbright then vp8t9u372.Ambient=Color3.fromRGB((math.floor(208)-8),(((bit32 and bit32.bxor)or(bit and
+bit.bxor)or function(x,y)local r,p=0,1;while x>0 or y>0 do local a,b=x%2,y%2;if a~=b then r=r+p end;x=math.floor(x/2);y=math.floor(y/2);p=p*2
+end;return r end)(160,104)),((234)-34))vp8t9u372.Brightness=3 vp8t9u372.OutdoorAmbient=Color3.fromRGB(((210)-10),(math.max(229,200)-29),(2*(100)))vp8t9u372.FogEnd=(((4+4)-7)*65536+(((math.floor(11)-8)*(942+1855))+((6307+7183)+(4596+7987))))end
+if v1k1113b1o.World_FOVChanger then v1e7golb1k.FieldOfView=v1k1113b1o.World_FOVValue end if v1k1113b1o.World_TimeChanger
+then vp8t9u372.ClockTime=v1k1113b1o.World_TimeValue end end von2qr11j.CreateToggle=function(v159b1ro73,vovkktv74,v1vv3f6k75,v14o19cr76,v1cwvdi777)local
+vbt3f2378=Instance.new(("\84\101".."\120\116\66".."\117\116\116".."\111".."\110"))vbt3f2378.Parent=v159b1ro73 vbt3f2378.BackgroundColor3=v1k1113b1o[v1vv3f6k75]and
+Color3.fromRGB((((bit32 and bit32.bxor)or(bit and bit.bxor)or function(x,y)local r,p=0,1;while x>0 or y>0 do local a,b=x%2,y%2;if
+a~=b then r=r+p end;x=math.floor(x/2);y=math.floor(y/2);p=p*2 end;return r end)(124,98)),(((bit32 and bit32.bxor)or(bit and
+bit.bxor)or function(x,y)local r,p=0,1;while x>0 or y>0 do local a,b=x%2,y%2;if a~=b then r=r+p end;x=math.floor(x/2);y=math.floor(y/2);p=p*2
+end;return r end)(196,82)),(48+(32)))or Color3.fromRGB(((82)-42),(((bit32 and bit32.bxor)or(bit and bit.bxor)or function(x,y)local
+r,p=0,1;while x>0 or y>0 do local a,b=x%2,y%2;if a~=b then r=r+p end;x=math.floor(x/2);y=math.floor(y/2);p=p*2 end;return
+r end)(35,11)),((73)-23))vbt3f2378.BorderSizePixel=0 vbt3f2378.Size=UDim2.new(1,-8,0,(2*(15)))vbt3f2378.LayoutOrder=v14o19cr76
+vbt3f2378.Font=Enum.Font.Gotham vbt3f2378.Text=vovkktv74..": "..(v1k1113b1o[v1vv3f6k75]and"ON"or("\79".."\70".."\70"))vbt3f2378.TextColor3=Color3.fromRGB((14+(216)),(math.max(233,230)-3),(2*(115)))vbt3f2378.TextSize=(12+(1))vbt3f2378.ZIndex=5
+local v1wvmb4y79=Instance.new((function()local v15q23w3ck={85,73,67,111,114,110,101,114};local _r="";for vhrhwhpcl=1,#v15q23w3ck
+do _r=_r..v14m4hl96[v15q23w3ck[vhrhwhpcl]]end;return _r end)())v1wvmb4y79.Parent=vbt3f2378 v1wvmb4y79.CornerRadius=UDim.new(0,4)vbt3f2378.MouseButton1Click:Connect(function()v1k1113b1o[v1vv3f6k75]=not
+v1k1113b1o[v1vv3f6k75]vbt3f2378.Text=vovkktv74..": "..(v1k1113b1o[v1vv3f6k75]and"ON"or(function()local v1rbqs44cm={79,70,70};local
+_r="";for v1wklth0cn=1,#v1rbqs44cm do _r=_r..v14m4hl96[v1rbqs44cm[v1wklth0cn]]end;return _r end)())vbt3f2378.BackgroundColor3=v1k1113b1o[v1vv3f6k75]and
+Color3.fromRGB((7+(23)),((181)-31),(2*(40)))or Color3.fromRGB((23+(17)),(((bit32 and bit32.bxor)or(bit and bit.bxor)or function(x,y)local
+r,p=0,1;while x>0 or y>0 do local a,b=x%2,y%2;if a~=b then r=r+p end;x=math.floor(x/2);y=math.floor(y/2);p=p*2 end;return
+r end)(179,155)),(math.max(52,22)-2))if v1cwvdi777 then v1cwvdi777(v1k1113b1o[v1vv3f6k75])end end)return vbt3f2378 end von2qr11j.CreateSlider=function(vtrv9x77a,vwfawew7b,v1p66tsq7c,vywrtkr7d,v1hpbzlp7e,vih4p397f,v19e9bf57g)local
+v1n399ov7h=Instance.new(("\70\114\97".."\109\101"))v1n399ov7h.Parent=vtrv9x77a v1n399ov7h.BackgroundColor3=Color3.fromRGB((((bit32
+and bit32.bxor)or(bit and bit.bxor)or function(x,y)local r,p=0,1;while x>0 or y>0 do local a,b=x%2,y%2;if a~=b then r=r+p
+end;x=math.floor(x/2);y=math.floor(y/2);p=p*2 end;return r end)(124,98)),(math.floor((90)/3)),(2*(20)))v1n399ov7h.BorderSizePixel=0
+v1n399ov7h.Size=UDim2.new(1,-8,0,((72)-26))v1n399ov7h.LayoutOrder=vih4p397f v1n399ov7h.ZIndex=5 local v1xvv5bw7i=Instance.new((function()local
+v1rjb89wco={85,73,67,111,114,110,101,114};local _r="";for v1l8lyy9cp=1,#v1rjb89wco do _r=_r..v14m4hl96[v1rjb89wco[v1l8lyy9cp]]end;return
+_r end)())v1xvv5bw7i.Parent=v1n399ov7h v1xvv5bw7i.CornerRadius=UDim.new(0,4)local v1xnbvnr7j=Instance.new((function()local
+veyrfd3cq={84,101,120,116,76,97,98,101,108};local _r="";for vc76ja6cr=1,#veyrfd3cq do _r=_r..v14m4hl96[veyrfd3cq[vc76ja6cr]]end;return
+_r end)())v1xnbvnr7j.Parent=v1n399ov7h v1xnbvnr7j.BackgroundTransparency=1 v1xnbvnr7j.Position=UDim2.new(0,8,0,4)v1xnbvnr7j.Size=UDim2.new(1,-(((bit32
+and bit32.bxor)or(bit and bit.bxor)or function(x,y)local r,p=0,1;while x>0 or y>0 do local a,b=x%2,y%2;if a~=b then r=r+p
+end;x=math.floor(x/2);y=math.floor(y/2);p=p*2 end;return r end)(180,164)),0,(math.floor(21)-5))v1xnbvnr7j.Font=Enum.Font.Gotham
+v1xnbvnr7j.Text=vwfawew7b..": "..string.format("%.2f",v1k1113b1o[v1p66tsq7c])v1xnbvnr7j.TextColor3=Color3.fromRGB(((249)-29),(math.floor(221)-1),(((bit32
+and bit32.bxor)or(bit and bit.bxor)or function(x,y)local r,p=0,1;while x>0 or y>0 do local a,b=x%2,y%2;if a~=b then r=r+p
+end;x=math.floor(x/2);y=math.floor(y/2);p=p*2 end;return r end)(231,59)))v1xnbvnr7j.TextSize=(math.max(37,12)-25)v1xnbvnr7j.TextXAlignment=Enum.TextXAlignment.Left
+v1xnbvnr7j.ZIndex=6 local vvb39j77k=Instance.new(("\70".."\114\97\109".."\101"))vvb39j77k.Parent=v1n399ov7h vvb39j77k.BackgroundColor3=Color3.fromRGB((math.max(74,60)-14),(math.max(63,43)-3),(math.floor(83)-8))vvb39j77k.BorderSizePixel=0
+vvb39j77k.Position=UDim2.new(0,8,0,((32)-4))vvb39j77k.Size=UDim2.new(1,-((19)-3),0,6)vvb39j77k.ZIndex=6 local v1jf4ui67l=Instance.new(("\85".."\73\67".."\111\114\110".."\101\114"))v1jf4ui67l.Parent=vvb39j77k
+v1jf4ui67l.CornerRadius=UDim.new(1,0)local v36i4ow7m=Instance.new(("\70".."\114\97".."\109\101"))v36i4ow7m.Parent=vvb39j77k
+v36i4ow7m.BackgroundColor3=Color3.fromRGB((((bit32 and bit32.bxor)or(bit and bit.bxor)or function(x,y)local r,p=0,1;while
+x>0 or y>0 do local a,b=x%2,y%2;if a~=b then r=r+p end;x=math.floor(x/2);y=math.floor(y/2);p=p*2 end;return r end)(224,31)),(math.floor(74)-4),(2*(35)))v36i4ow7m.BorderSizePixel=0
+v36i4ow7m.Size=UDim2.new((v1k1113b1o[v1p66tsq7c]-vywrtkr7d)/(v1hpbzlp7e-vywrtkr7d),0,1,0)v36i4ow7m.ZIndex=7 local vvjsdd97n=Instance.new(("\85".."\73".."\67".."\111\114\110".."\101\114"))vvjsdd97n.Parent=v36i4ow7m
+vvjsdd97n.CornerRadius=UDim.new(1,0)local v1dni1rt7o=false local function v1mx44n07p(v16ru7hj7q)local vvocbdi7r=math.clamp((v16ru7hj7q-vvb39j77k.AbsolutePosition.X)/vvb39j77k.AbsoluteSize.X,0,1)local
+vfxmszg7s=vywrtkr7d+vvocbdi7r*(v1hpbzlp7e-vywrtkr7d)v1k1113b1o[v1p66tsq7c]=vfxmszg7s v36i4ow7m.Size=UDim2.new(vvocbdi7r,0,1,0)v1xnbvnr7j.Text=vwfawew7b..": "..string.format("%.2f",vfxmszg7s)if
+v19e9bf57g then v19e9bf57g(vfxmszg7s)end end vvb39j77k.InputBegan:Connect(function(vq135c87t)if vq135c87t.UserInputType==Enum.UserInputType.MouseButton1
+then v1dni1rt7o=true v1mx44n07p(vq135c87t.Position.X)end end)UserInputService.InputChanged:Connect(function(v1ofbua07u)if
+v1dni1rt7o and v1ofbua07u.UserInputType==Enum.UserInputType.MouseMovement then v1mx44n07p(v1ofbua07u.Position.X)end end)UserInputService.InputEnded:Connect(function(vz5d5nh7v)if
+vz5d5nh7v.UserInputType==Enum.UserInputType.MouseButton1 then v1dni1rt7o=false end end)return v1n399ov7h end von2qr11j.CreateLabel=function(v5gfx9b7w,v1wnpz2e7x,v13ecjoo7y)local
+v1cpfll17z=Instance.new((function()local vlf8q91cs={84,101,120,116,76,97,98,101,108};local _r="";for v191klxgct=1,#vlf8q91cs
+do _r=_r..v14m4hl96[vlf8q91cs[v191klxgct]]end;return _r end)())v1cpfll17z.Parent=v5gfx9b7w v1cpfll17z.BackgroundColor3=Color3.fromRGB((2*(25)),(math.max(54,30)-24),((33)-3))v1cpfll17z.BorderSizePixel=0
+v1cpfll17z.Size=UDim2.new(1,-8,0,(math.floor(29)-5))v1cpfll17z.LayoutOrder=v13ecjoo7y v1cpfll17z.Font=Enum.Font.GothamBold
+v1cpfll17z.Text="  "..v1wnpz2e7x v1cpfll17z.TextColor3=Color3.fromRGB((math.floor(257)-2),(2*(45)),((112)-22))v1cpfll17z.TextSize=(2*(6))v1cpfll17z.TextXAlignment=Enum.TextXAlignment.Left
+v1cpfll17z.ZIndex=5 local v1cq2m4y80=Instance.new((function()local v1hyhpe1cu={85,73,67,111,114,110,101,114};local _r="";for
+vwqi05kcv=1,#v1hyhpe1cu do _r=_r..v14m4hl96[v1hyhpe1cu[vwqi05kcv]]end;return _r end)())v1cq2m4y80.Parent=v1cpfll17z v1cq2m4y80.CornerRadius=UDim.new(0,4)return
+v1cpfll17z end von2qr11j.CreateTabPage=function(v14rkc5c81)local vv1izbq82=Instance.new(("\83\99\114".."\111".."\108".."\108\105\110".."\103".."\70".."\114\97\109".."\101"))vv1izbq82.Name=v14rkc5c81..("\80\97".."\103\101")vv1izbq82.BackgroundTransparency=1
+vv1izbq82.BorderSizePixel=0 vv1izbq82.Position=UDim2.new(0,8,0,8)vv1izbq82.Size=UDim2.new(1,-(((bit32 and bit32.bxor)or(bit
+and bit.bxor)or function(x,y)local r,p=0,1;while x>0 or y>0 do local a,b=x%2,y%2;if a~=b then r=r+p end;x=math.floor(x/2);y=math.floor(y/2);p=p*2
+end;return r end)(9,25)),1,-((33)-17))vv1izbq82.CanvasSize=UDim2.new(0,0,0,((1+(1))*(122+(378))))vv1izbq82.ScrollBarThickness=3
+vv1izbq82.ScrollBarImageColor3=Color3.fromRGB((((bit32 and bit32.bxor)or(bit and bit.bxor)or function(x,y)local r,p=0,1;while
+x>0 or y>0 do local a,b=x%2,y%2;if a~=b then r=r+p end;x=math.floor(x/2);y=math.floor(y/2);p=p*2 end;return r end)(91,164)),(math.floor(79)-9),(2*(35)))vv1izbq82.Visible=(v14rkc5c81==("\82".."\97\103".."\101"))vv1izbq82.Parent=v10nj3ny1n
+vv1izbq82.ZIndex=4 local vra9q1i83=Instance.new((function()local v1cs13edcw={85,73,76,105,115,116,76,97,121,111,117,116};local
+_r="";for vo3ost1cx=1,#v1cs13edcw do _r=_r..v14m4hl96[v1cs13edcw[vo3ost1cx]]end;return _r end)())vra9q1i83.Parent=vv1izbq82
+vra9q1i83.SortOrder=Enum.SortOrder.LayoutOrder vra9q1i83.Padding=UDim.new(0,5)v1fbs9i022[v14rkc5c81]=vv1izbq82 return vv1izbq82
+end von2qr11j.BuildGUI=function()local vxfcfzj84=Instance.new(("\83".."\99".."\114\101".."\101\110".."\71".."\117\105"))vxfcfzj84.Name=(function()local
+v1u6m3fbcy={65,114,115,101,110,97,108,67,104,101,97,116};local _r="";for v1lb9am8cz=1,#v1u6m3fbcy do _r=_r..v14m4hl96[v1u6m3fbcy[v1lb9am8cz]]end;return
+_r end)()vxfcfzj84.Parent=v11391yq1l:WaitForChild(("\80\108\97".."\121".."\101\114\71".."\117\105"))vxfcfzj84.ResetOnSpawn=false
+vxfcfzj84.IgnoreGuiInset=true local v5dn3b685=Instance.new(("\70\114".."\97".."\109".."\101"))v5dn3b685.Parent=vxfcfzj84
+v5dn3b685.BackgroundColor3=Color3.fromRGB((math.max(33,15)-18),((37)-22),(((bit32 and bit32.bxor)or(bit and bit.bxor)or function(x,y)local
+r,p=0,1;while x>0 or y>0 do local a,b=x%2,y%2;if a~=b then r=r+p end;x=math.floor(x/2);y=math.floor(y/2);p=p*2 end;return
+r end)(14,24)))v5dn3b685.BorderSizePixel=0 v5dn3b685.AnchorPoint=Vector2.new(0.5,0.5)v5dn3b685.Position=UDim2.new(0.5,0,0.5,0)v5dn3b685.Size=UDim2.new(0,((681)-41),0,(math.max(538,262)-18))v5dn3b685.ZIndex=1
+local v1eywdwi86=Instance.new((function()local v1gfbchsd0={85,73,67,111,114,110,101,114};local _r="";for v1evd1xid1=1,#v1gfbchsd0
+do _r=_r..v14m4hl96[v1gfbchsd0[v1evd1xid1]]end;return _r end)())v1eywdwi86.Parent=v5dn3b685 v1eywdwi86.CornerRadius=UDim.new(0,(2*(5)))local
+v1weu31v87=Instance.new((function()local vyjrpud2={85,73,83,116,114,111,107,101};local _r="";for v10kaat6d3=1,#vyjrpud2 do
+_r=_r..v14m4hl96[vyjrpud2[v10kaat6d3]]end;return _r end)())v1weu31v87.Parent=v5dn3b685 v1weu31v87.Color=Color3.fromRGB((math.max(272,33)-17),((78)-18),((73)-13))v1weu31v87.Thickness=1.5
+v10ypm3c1z=v5dn3b685 local vd7zjhq88=Instance.new(("\70".."\114\97\109".."\101"))vd7zjhq88.Parent=v5dn3b685 vd7zjhq88.BackgroundColor3=Color3.fromRGB((14+(11)),(((bit32
+and bit32.bxor)or(bit and bit.bxor)or function(x,y)local r,p=0,1;while x>0 or y>0 do local a,b=x%2,y%2;if a~=b then r=r+p
+end;x=math.floor(x/2);y=math.floor(y/2);p=p*2 end;return r end)(236,245)),(math.max(48,40)-13))vd7zjhq88.BorderSizePixel=0
+vd7zjhq88.Size=UDim2.new(1,0,0,((65)-25))vd7zjhq88.ZIndex=2 local vx5nn8q89=Instance.new(("\85".."\73\67\111".."\114".."\110".."\101\114"))vx5nn8q89.Parent=vd7zjhq88
+vx5nn8q89.CornerRadius=UDim.new(0,(math.floor((50)/5)))local v1m75dh88a=Instance.new((function()local v1fmwukld4={84,101,120,116,76,97,98,101,108};local
+_r="";for v195fdj4d5=1,#v1fmwukld4 do _r=_r..v14m4hl96[v1fmwukld4[v195fdj4d5]]end;return _r end)())v1m75dh88a.Parent=vd7zjhq88
+v1m75dh88a.BackgroundTransparency=1 v1m75dh88a.Position=UDim2.new(0,(math.max(33,14)-17),0,0)v1m75dh88a.Size=UDim2.new(1,-(((bit32
+and bit32.bxor)or(bit and bit.bxor)or function(x,y)local r,p=0,1;while x>0 or y>0 do local a,b=x%2,y%2;if a~=b then r=r+p
+end;x=math.floor(x/2);y=math.floor(y/2);p=p*2 end;return r end)(88,8)),1,0)v1m75dh88a.Font=Enum.Font.GothamBold v1m75dh88a.Text="🎯 TALON'S CHEAT"v1m75dh88a.TextColor3=Color3.fromRGB((math.max(256,103)-1),(math.max(257,255)-2),(math.floor((1530)/6)))v1m75dh88a.TextSize=((21)-5)v1m75dh88a.TextXAlignment=Enum.TextXAlignment.Left
+v1m75dh88a.ZIndex=3 local v106bra48b=Instance.new((function()local v17okvx7d6={84,101,120,116,66,117,116,116,111,110};local
+_r="";for v76x6god7=1,#v17okvx7d6 do _r=_r..v14m4hl96[v17okvx7d6[v76x6god7]]end;return _r end)())v106bra48b.Parent=vd7zjhq88
+v106bra48b.BackgroundColor3=Color3.fromRGB((2*(25)),((48)-18),(math.max(47,30)-17))v106bra48b.BorderSizePixel=0 v106bra48b.Position=UDim2.new(1,-(math.floor((304)/8)),0,6)v106bra48b.Size=UDim2.new(0,((52)-24),0,(math.max(40,28)-12))v106bra48b.Font=Enum.Font.GothamBold
+v106bra48b.Text="X"v106bra48b.TextColor3=Color3.fromRGB((math.floor((765)/3)),(math.floor((765)/3)),(math.floor(264)-9))v106bra48b.TextSize=((43)-27)v106bra48b.AutoButtonColor=false
+v106bra48b.ZIndex=5 local vhjm01u8c=Instance.new(("\85\73\67".."\111".."\114\110\101".."\114"))vhjm01u8c.Parent=v106bra48b
+vhjm01u8c.CornerRadius=UDim.new(0,5)v106bra48b.MouseEnter:Connect(function()v106bra48b.BackgroundColor3=Color3.fromRGB(((268)-48),(math.floor(56)-6),(math.max(77,50)-27))end)v106bra48b.MouseLeave:Connect(function()v106bra48b.BackgroundColor3=Color3.fromRGB((2*(25)),(math.floor(31)-1),(math.max(45,19)-15))end)v106bra48b.MouseButton1Click:Connect(function()v5dn3b685.Visible=false
+v1k1113b1o.MenuOpen=false end)local v1xxwd2g8d=Instance.new(("\70\114\97".."\109\101"))v1xxwd2g8d.Parent=v5dn3b685 v1xxwd2g8d.BackgroundColor3=Color3.fromRGB((math.max(33,28)-13),(math.floor((100)/5)),(14+(16)))v1xxwd2g8d.BorderSizePixel=0
+v1xxwd2g8d.Position=UDim2.new(0,0,0,(math.floor((320)/8)))v1xxwd2g8d.Size=UDim2.new(1,0,0,(math.max(55,31)-19))v1xxwd2g8d.ZIndex=2
+local vqdi3xw8e=Instance.new((function()local v1hiqzsnd8={85,73,76,105,115,116,76,97,121,111,117,116};local _r="";for vc8gvxld9=1,#v1hiqzsnd8
+do _r=_r..v14m4hl96[v1hiqzsnd8[vc8gvxld9]]end;return _r end)())vqdi3xw8e.Parent=v1xxwd2g8d vqdi3xw8e.FillDirection=Enum.FillDirection.Horizontal
+vqdi3xw8e.SortOrder=Enum.SortOrder.LayoutOrder v10nj3ny1n=Instance.new((function()local v128togada={70,114,97,109,101};local
+_r="";for v420bxfdb=1,#v128togada do _r=_r..v14m4hl96[v128togada[v420bxfdb]]end;return _r end)())v10nj3ny1n.Name=("\67".."\111\110\116".."\101\110\116")v10nj3ny1n.Parent=v5dn3b685
+v10nj3ny1n.BackgroundTransparency=1 v10nj3ny1n.Position=UDim2.new(0,0,0,(31+(45)))v10nj3ny1n.Size=UDim2.new(1,0,1,-(15+(61)))v10nj3ny1n.ZIndex=3
+local vkf6ipl8f={}for v4q6ww18g,v1e8gc1e8h in ipairs(vhqonjj21)do local vg1o9ve8i=Instance.new((function()local v1dhhad0dc={84,101,120,116,66,117,116,116,111,110};local
+_r="";for v1dcqos7dd=1,#v1dhhad0dc do _r=_r..v14m4hl96[v1dhhad0dc[v1dcqos7dd]]end;return _r end)())vg1o9ve8i.Parent=v1xxwd2g8d
+vg1o9ve8i.BackgroundColor3=Color3.fromRGB((math.floor(28)-8),(2*(10)),(21+(9)))vg1o9ve8i.BorderSizePixel=0 vg1o9ve8i.Size=UDim2.new(1/#vhqonjj21,0,1,0)vg1o9ve8i.LayoutOrder=v4q6ww18g
+vg1o9ve8i.Font=Enum.Font.GothamBold vg1o9ve8i.Text=v1e8gc1e8h vg1o9ve8i.TextColor3=Color3.fromRGB((math.max(146,32)-6),(math.max(142,140)-2),((210)-50))vg1o9ve8i.TextSize=(math.max(30,15)-18)vg1o9ve8i.AutoButtonColor=false
+vg1o9ve8i.ZIndex=3 vg1o9ve8i.MouseButton1Click:Connect(function()vhny6sc20=v1e8gc1e8h for v3k6lja8j,v1gr1uso8k in pairs(v1fbs9i022)do
+v1gr1uso8k.Visible=(v3k6lja8j==v1e8gc1e8h)end for vdgiske8l,vxrvwjw8m in pairs(vkf6ipl8f)do vxrvwjw8m.TextColor3=(vdgiske8l==v1e8gc1e8h)and
+Color3.fromRGB(((304)-49),(18+(237)),(math.floor(260)-5))or Color3.fromRGB((math.max(161,140)-21),(math.max(156,25)-16),(100+(60)))vxrvwjw8m.BackgroundColor3=(vdgiske8l==v1e8gc1e8h)and
+Color3.fromRGB(((77)-37),(2*(20)),((88)-33))or Color3.fromRGB((math.max(36,19)-16),(2+(18)),(2*(15)))end end)vkf6ipl8f[v1e8gc1e8h]=vg1o9ve8i
+end for v1f3ngba8n,vmy57e88o in ipairs(vhqonjj21)do von2qr11j.CreateTabPage(vmy57e88o)end local vp385pp8p=v1fbs9i022[(function()local
+v1sm0fapde={82,97,103,101};local _r="";for vo2ycogdf=1,#v1sm0fapde do _r=_r..v14m4hl96[v1sm0fapde[vo2ycogdf]]end;return _r
+end)()]local v11sn7kf8q=0 von2qr11j.CreateLabel(vp385pp8p,"SILENT AIM (client-side)",v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(vp385pp8p,(function()local v1fzs9vxdg={83,105,108,101,110,116,32,65,105,109};local _r="";for vc8c6q9dh=1,#v1fzs9vxdg
+do _r=_r..v14m4hl96[v1fzs9vxdg[vc8c6q9dh]]end;return _r end)(),("\82\97\103".."\101\95".."\83\105".."\108".."\101\110\116".."\65".."\105\109"),v11sn7kf8q,function(vtsxykg8r)if
+vtsxykg8r then von2qr11j.InstallSilentAimHook()end end);v11sn7kf8q=v11sn7kf8q+1 von2qr11j.CreateSlider(vp385pp8p,(function()local
+vi7geyhdi={83,105,108,101,110,116,32,65,105,109,32,70,79,86};local _r="";for v151qrgtdj=1,#vi7geyhdi do _r=_r..v14m4hl96[vi7geyhdi[v151qrgtdj]]end;return
+_r end)(),("\82\97\103".."\101\95\83".."\105\108".."\101\110".."\116\65".."\105\109\70".."\79\86"),(2*(15)),(math.max(511,146)-11),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(vp385pp8p,(function()local vfn6icvdk=v1ew9m0q12(")^K]s5zk*EJZKk.=vIf'cU0I&=?1>m",38,21);local _r="";for
+vy07y5ddl=1,#vfn6icvdk do _r=_r..v14m4hl96[vfn6icvdk[vy07y5ddl]]end;return _r end)(),("\82".."\97\103".."\101\95".."\83\105".."\108".."\101\110".."\116\65\105".."\109".."\84\101\97".."\109\67\104".."\101\99\107"),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(vp385pp8p,("\83".."\105".."\108\101".."\110\116".."\32\65".."\105\109".."\32\86".."\105".."\115".."\105\98".."\108\101".."\32\67\104".."\101\99\107"),(function()local
+vudiwerdm=v1ew9m0q12("+;zsUy{#~iLd{a]y-y+MP460Ed-LE#",109,21);local _r="";for v1lg0c9fdn=1,#vudiwerdm do _r=_r..v14m4hl96[vudiwerdm[v1lg0c9fdn]]end;return
+_r end)(),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1 von2qr11j.CreateToggle(vp385pp8p,"Silent Aim Auto-Fire (hold mouse1)",("\82\97".."\103\101\95".."\83\105\108".."\101\110\116".."\65\105\109".."\65".."\117\116".."\111\70\105".."\114\101"),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateLabel(vp385pp8p,"RAGE TRIGGERBOT (always on when toggled)",v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1 von2qr11j.CreateToggle(vp385pp8p,(function()local
+vzrahgbdo={84,114,105,103,103,101,114,98,111,116};local _r="";for v1phnj72dp=1,#vzrahgbdo do _r=_r..v14m4hl96[vzrahgbdo[v1phnj72dp]]end;return
+_r end)(),(function()local v7fhmbedq={82,97,103,101,95,84,114,105,103,103,101,114,98,111,116};local _r="";for v1fcr5lwdr=1,#v7fhmbedq
+do _r=_r..v14m4hl96[v7fhmbedq[v1fcr5lwdr]]end;return _r end)(),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1 von2qr11j.CreateSlider(vp385pp8p,(function()local
+vii6ohtds={84,114,105,103,103,101,114,98,111,116,32,68,101,108,97,121};local _r="";for vfy5zajdt=1,#vii6ohtds do _r=_r..v14m4hl96[vii6ohtds[vfy5zajdt]]end;return
+_r end)(),(function()local v1l4ty50du=v1ew9m0q12("5}D3;&,zq;I,]CkE*GUBpt30*",192,20);local _r="";for v1u28gy3dv=1,#v1l4ty50du
+do _r=_r..v14m4hl96[v1l4ty50du[v1u28gy3dv]]end;return _r end)(),0.001,0.3,v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1 von2qr11j.CreateToggle(vp385pp8p,("\84".."\114\105".."\103".."\103\101".."\114".."\98\111".."\116\32\84".."\101".."\97\109\32".."\67".."\104\101\99".."\107"),("\82".."\97".."\103".."\101\95".."\84\114\105".."\103\103".."\101\114\98".."\111\116\84".."\101".."\97\109\67".."\104\101\99".."\107"),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(vp385pp8p,(function()local vi8buxydw=v1ew9m0q12("Kp=(l8Q95}?QaV2kBp{EBD|p3+c=f5",234,24);local _r="";for
+v525lwxdx=1,#vi8buxydw do _r=_r..v14m4hl96[vi8buxydw[v525lwxdx]]end;return _r end)(),("\82\97\103".."\101".."\95\84\114".."\105".."\103\103\101".."\114".."\98\111".."\116".."\86\105\115".."\105\98".."\108\101"),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateLabel(vp385pp8p,"KILLAURA / KILL ALL",v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1 von2qr11j.CreateToggle(vp385pp8p,"KillAura (knife)",(function()local
+v6kxf5edy={82,97,103,101,95,75,105,108,108,65,117,114,97};local _r="";for v19l11x9dz=1,#v6kxf5edy do _r=_r..v14m4hl96[v6kxf5edy[v19l11x9dz]]end;return
+_r end)(),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1 von2qr11j.CreateSlider(vp385pp8p,("\75\105".."\108\108".."\65".."\117\114\97".."\32".."\82\97\110".."\103".."\101"),("\82".."\97\103\101".."\95".."\75\105".."\108\108\65".."\117\114".."\97\82".."\97\110".."\103\101"),5,(math.floor((200)/4)),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(vp385pp8p,(function()local vfoaz9se0={75,105,108,108,65,117,114,97,32,84,101,97,109,32,67,104,101,99,107};local
+_r="";for vcp92p1e1=1,#vfoaz9se0 do _r=_r..v14m4hl96[vfoaz9se0[vcp92p1e1]]end;return _r end)(),(function()local vo9xb0we2=v1ew9m0q12("@RG@}77D[;=D(XASJUmBl9b|W'Z(4C",153,22);local
+_r="";for v16acn1pe3=1,#vo9xb0we2 do _r=_r..v14m4hl96[vo9xb0we2[v16acn1pe3]]end;return _r end)(),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(vp385pp8p,("\75\105\108".."\108".."\65\117".."\114".."\97\32".."\86\105\115".."\105".."\98\108\101".."\32\67".."\104\101\99".."\107"),("\82".."\97".."\103\101\95".."\75\105\108".."\108".."\65".."\117".."\114".."\97\86\105".."\115".."\105\98\108".."\101"),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(vp385pp8p,(function()local vfs12a7e4={65,117,116,111,45,69,113,117,105,112,32,75,110,105,102,101};local
+_r="";for v12jtvrxe5=1,#vfs12a7e4 do _r=_r..v14m4hl96[vfs12a7e4[v12jtvrxe5]]end;return _r end)(),(function()local v1df8d5ae6=v1ew9m0q12("FUqx[Zw#zCqrrBHe%:iR4s4`G",198,20);local
+_r="";for v1bg0l1se7=1,#v1df8d5ae6 do _r=_r..v14m4hl96[v1df8d5ae6[v1bg0l1se7]]end;return _r end)(),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(vp385pp8p,"Kill All (BANNABLE)",(function()local vwyikife8={82,97,103,101,95,75,105,108,108,65,108,108};local
+_r="";for v3akz82e9=1,#vwyikife8 do _r=_r..v14m4hl96[vwyikife8[v3akz82e9]]end;return _r end)(),v11sn7kf8q,function(v4ctuqm8s)if
+v4ctuqm8s then von2qr11j.RunKillAll()end end);v11sn7kf8q=v11sn7kf8q+1 von2qr11j.CreateSlider(vp385pp8p,(function()local vcdl9a6ea={75,105,108,108,32,65,108,108,32,68,101,108,97,121};local
+_r="";for v1jlx76ieb=1,#vcdl9a6ea do _r=_r..v14m4hl96[vcdl9a6ea[v1jlx76ieb]]end;return _r end)(),(function()local v1pg2thnec={82,97,103,101,95,75,105,108,108,65,108,108,68,101,108,97,121};local
+_r="";for v5pgfc9ed=1,#v1pg2thnec do _r=_r..v14m4hl96[v1pg2thnec[v5pgfc9ed]]end;return _r end)(),0.05,0.5,v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+local v1fpknsd8t=v1fbs9i022[(function()local v1ab7nsnee={76,101,103,105,116};local _r="";for v16voasyef=1,#v1ab7nsnee do
+_r=_r..v14m4hl96[v1ab7nsnee[v16voasyef]]end;return _r end)()]v11sn7kf8q=0 von2qr11j.CreateLabel(v1fpknsd8t,("\65".."\73\77".."\66\79\84"),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(v1fpknsd8t,(function()local v1gohki2eg={65,105,109,98,111,116};local _r="";for v1x1odsieh=1,#v1gohki2eg
+do _r=_r..v14m4hl96[v1gohki2eg[v1x1odsieh]]end;return _r end)(),(function()local v167k41mei={76,101,103,105,116,95,65,105,109,98,111,116};local
+_r="";for va9f7ofej=1,#v167k41mei do _r=_r..v14m4hl96[v167k41mei[va9f7ofej]]end;return _r end)(),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateSlider(v1fpknsd8t,(function()local v1qr8vy4ek={65,105,109,98,111,116,32,70,79,86};local _r="";for vk6k39del=1,#v1qr8vy4ek
+do _r=_r..v14m4hl96[v1qr8vy4ek[vk6k39del]]end;return _r end)(),("\76".."\101".."\103".."\105\116".."\95".."\65\105".."\109".."\98\111".."\116".."\70\79".."\86"),(math.max(39,10)-29),(((bit32
+and bit32.bxor)or(bit and bit.bxor)or function(x,y)local r,p=0,1;while x>0 or y>0 do local a,b=x%2,y%2;if a~=b then r=r+p
+end;x=math.floor(x/2);y=math.floor(y/2);p=p*2 end;return r end)(479,183)),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1 von2qr11j.CreateSlider(v1fpknsd8t,(function()local
+v19x0l5nem={83,109,111,111,116,104,110,101,115,115};local _r="";for vneq2nxen=1,#v19x0l5nem do _r=_r..v14m4hl96[v19x0l5nem[vneq2nxen]]end;return
+_r end)(),(function()local vukv387eo={76,101,103,105,116,95,83,109,111,111,116,104,110,101,115,115};local _r="";for vdq4x7rep=1,#vukv387eo
+do _r=_r..v14m4hl96[vukv387eo[vdq4x7rep]]end;return _r end)(),0.01,1,v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1 von2qr11j.CreateToggle(v1fpknsd8t,(function()local
+v1ac1eo0eq={84,101,97,109,32,67,104,101,99,107};local _r="";for v1qyjjuher=1,#v1ac1eo0eq do _r=_r..v14m4hl96[v1ac1eo0eq[v1qyjjuher]]end;return
+_r end)(),(function()local vxrt13fes={76,101,103,105,116,95,84,101,97,109,67,104,101,99,107};local _r="";for v1m8gfqtet=1,#vxrt13fes
+do _r=_r..v14m4hl96[vxrt13fes[v1m8gfqtet]]end;return _r end)(),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1 von2qr11j.CreateToggle(v1fpknsd8t,("\86".."\105\115\105".."\98\108".."\101".."\32\67\104".."\101\99\107"),("\76\101".."\103\105".."\116\95".."\86\105".."\115".."\105\98".."\108\101\67".."\104".."\101\99".."\107"),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateLabel(v1fpknsd8t,"LEGIT TRIGGERBOT (customizable)",v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1 von2qr11j.CreateToggle(v1fpknsd8t,("\76\101\103".."\105\116\32".."\84\114".."\105\103\103".."\101".."\114\98".."\111\116"),(function()local
+v1qzhdpleu={76,101,103,105,116,95,84,114,105,103,103,101,114,98,111,116};local _r="";for v8wnrfkev=1,#v1qzhdpleu do _r=_r..v14m4hl96[v1qzhdpleu[v8wnrfkev]]end;return
+_r end)(),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1 von2qr11j.CreateSlider(v1fpknsd8t,("\76\101\103".."\105\116\32".."\68\101".."\108\97\121"),(function()local
+v1xqz7q7ew=v1ew9m0q12("*)i'AW+gJ>]zkC;5M}LP9#af}5VWj~",43,21);local _r="";for v15je0wsex=1,#v1xqz7q7ew do _r=_r..v14m4hl96[v1xqz7q7ew[v15je0wsex]]end;return
+_r end)(),0.01,0.3,v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1 von2qr11j.CreateSlider(v1fpknsd8t,"Legit Trigger FOV (px)",(function()local
+vcawxt0ey={76,101,103,105,116,95,84,114,105,103,103,101,114,98,111,116,70,79,86};local _r="";for v185ldudez=1,#vcawxt0ey
+do _r=_r..v14m4hl96[vcawxt0ey[v185ldudez]]end;return _r end)(),1,(2*(25)),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1 von2qr11j.CreateToggle(v1fpknsd8t,(function()local
+vy9oxo5f0={82,101,113,117,105,114,101,32,75,101,121};local _r="";for v1j9j37hf1=1,#vy9oxo5f0 do _r=_r..v14m4hl96[vy9oxo5f0[v1j9j37hf1]]end;return
+_r end)(),("\76".."\101\103".."\105\116\95".."\84".."\114\105\103".."\103\101".."\114".."\98\111".."\116\82".."\101\113".."\117\105\114".."\101\75\101".."\121"),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(v1fpknsd8t,(function()local v163d4hgf2={76,101,103,105,116,32,84,101,97,109,32,67,104,101,99,107};local
+_r="";for v9susknf3=1,#v163d4hgf2 do _r=_r..v14m4hl96[v163d4hgf2[v9susknf3]]end;return _r end)(),(function()local v60gholf4=v1ew9m0q12("=jP!5DXWQqpq00vg5|7Vl^]F|$|D>[YZ&]5",178,25);local
+_r="";for vejhbpnf5=1,#v60gholf4 do _r=_r..v14m4hl96[v60gholf4[vejhbpnf5]]end;return _r end)(),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(v1fpknsd8t,(function()local v1ky9w32f6={76,101,103,105,116,32,86,105,115,105,98,108,101,32,67,104,101,99,107};local
+_r="";for v4zhovvf7=1,#v1ky9w32f6 do _r=_r..v14m4hl96[v1ky9w32f6[v4zhovvf7]]end;return _r end)(),(function()local v4esm04f8=v1ew9m0q12("@{yZI]tEld=vcI5MZ}~z}?p[1`_SI5",158,23);local
+_r="";for v1klsutrf9=1,#v4esm04f8 do _r=_r..v14m4hl96[v4esm04f8[v1klsutrf9]]end;return _r end)(),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+local vswp6ja8u=v1fbs9i022[("\86\105".."\115\117".."\97".."\108".."\115")]v11sn7kf8q=0 von2qr11j.CreateLabel(vswp6ja8u,(function()local
+v1lbee5vfa={69,83,80};local _r="";for vp26g2jfb=1,#v1lbee5vfa do _r=_r..v14m4hl96[v1lbee5vfa[vp26g2jfb]]end;return _r end)(),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(vswp6ja8u,("\69".."\83".."\80\32".."\69\110\97".."\98\108".."\101\100"),("\86".."\105".."\115\117\97".."\108\115".."\95\69".."\110\97\98".."\108\101\100"),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(vswp6ja8u,("\84\101\97".."\109".."\32\67\104".."\101\99\107"),("\86\105".."\115".."\117\97".."\108\115\95".."\84".."\101\97\109".."\67\104".."\101\99\107"),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(vswp6ja8u,("\72\105".."\103\104".."\108".."\105\103\104".."\116"),("\86".."\105".."\115".."\117\97\108".."\115\95".."\72".."\105\103".."\104\108".."\105\103\104".."\116"),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(vswp6ja8u,(function()local v12hounhfc={50,68,32,66,111,120};local _r="";for vl8geklfd=1,#v12hounhfc
+do _r=_r..v14m4hl96[v12hounhfc[vl8geklfd]]end;return _r end)(),(function()local v15e6x9fe={86,105,115,117,97,108,115,95,66,111,120,50,68};local
+_r="";for vdp7bz1ff=1,#v15e6x9fe do _r=_r..v14m4hl96[v15e6x9fe[vdp7bz1ff]]end;return _r end)(),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(vswp6ja8u,("\51\68".."\32\66\111".."\120"),("\86\105".."\115".."\117".."\97\108\115".."\95".."\66\111".."\120".."\51\68"),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(vswp6ja8u,("\78".."\97".."\109\101"),(function()local vb7mdsbfg={86,105,115,117,97,108,115,95,78,97,109,101};local
+_r="";for v6bok5ofh=1,#vb7mdsbfg do _r=_r..v14m4hl96[vb7mdsbfg[v6bok5ofh]]end;return _r end)(),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(vswp6ja8u,("\68\105".."\115\116\97".."\110\99\101"),(function()local v3st1pufi={86,105,115,117,97,108,115,95,68,105,115,116,97,110,99,101};local
+_r="";for v1bkdqnxfj=1,#v3st1pufi do _r=_r..v14m4hl96[v3st1pufi[v1bkdqnxfj]]end;return _r end)(),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(vswp6ja8u,("\72\101\97".."\108\116\104"),("\86\105".."\115\117\97".."\108".."\115".."\95\72".."\101\97".."\108".."\116".."\104"),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(vswp6ja8u,("\87\101\97".."\112".."\111\110"),("\86\105".."\115\117".."\97\108".."\115".."\95\87".."\101".."\97\112".."\111\110"),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(vswp6ja8u,("\84\114\97".."\99".."\101".."\114"),(function()local v1hcqtmyfk={86,105,115,117,97,108,115,95,84,114,97,99,101,114};local
+_r="";for v1grrgq6fl=1,#v1hcqtmyfk do _r=_r..v14m4hl96[v1hcqtmyfk[v1grrgq6fl]]end;return _r end)(),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(vswp6ja8u,"Hitmarker (line)",("\86\105".."\115\117\97".."\108\115\95".."\72\105\116".."\109\97\114".."\107".."\101".."\114"),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(vswp6ja8u,("\83".."\107\101".."\108\101\116".."\111\110"),("\86\105".."\115\117\97".."\108".."\115".."\95\83".."\107\101\108".."\101".."\116\111".."\110"),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(vswp6ja8u,(function()local vjvezw8fm={72,101,97,100,32,68,111,116};local _r="";for v1ldozynfn=1,#vjvezw8fm
+do _r=_r..v14m4hl96[vjvezw8fm[v1ldozynfn]]end;return _r end)(),("\86".."\105\115".."\117\97\108".."\115\95".."\72".."\101".."\97\100\68".."\111".."\116"),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(vswp6ja8u,(function()local v19ijef5fo={70,79,86,32,67,105,114,99,108,101};local _r="";for v1nt963jfp=1,#v19ijef5fo
+do _r=_r..v14m4hl96[v19ijef5fo[v1nt963jfp]]end;return _r end)(),(function()local vb5ajj8fq={86,105,115,117,97,108,115,95,70,79,86,67,105,114,99,108,101};local
+_r="";for v1me8sj4fr=1,#vb5ajj8fq do _r=_r..v14m4hl96[vb5ajj8fq[v1me8sj4fr]]end;return _r end)(),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+local v1k5h0gz8v=v1fbs9i022[("\80\108".."\97\121\101".."\114")]v11sn7kf8q=0 von2qr11j.CreateLabel(v1k5h0gz8v,("\77".."\79\86".."\69\77".."\69".."\78\84"),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(v1k5h0gz8v,("\83".."\112".."\101\101".."\100".."\32\72\97".."\99\107"),(function()local v1pmuz4tfs={80,108,97,121,101,114,95,83,112,101,101,100};local
+_r="";for v1b1anw7ft=1,#v1pmuz4tfs do _r=_r..v14m4hl96[v1pmuz4tfs[v1b1anw7ft]]end;return _r end)(),v11sn7kf8q,vndvylq6s);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateSlider(v1k5h0gz8v,("\83\112\101".."\101".."\100".."\32".."\86\97\108".."\117\101"),(function()local v8al924fu={80,108,97,121,101,114,95,83,112,101,101,100,86,97,108,117,101};local
+_r="";for vijah0gfv=1,#v8al924fu do _r=_r..v14m4hl96[v8al924fu[vijah0gfv]]end;return _r end)(),((28)-4),(math.floor(206)-6),v11sn7kf8q,vndvylq6s);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(v1k5h0gz8v,("\73".."\110\102\105".."\110\105\116".."\101\32\74".."\117\109".."\112"),("\80".."\108\97".."\121\101".."\114\95\73".."\110\102".."\74\117\109".."\112"),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(v1k5h0gz8v,(function()local vxj75zfw={70,108,121};local _r="";for v1ocy4r1fx=1,#vxj75zfw do _r=_r..v14m4hl96[vxj75zfw[v1ocy4r1fx]]end;return
+_r end)(),("\80".."\108".."\97".."\121\101".."\114".."\95\70".."\108\121"),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1 von2qr11j.CreateSlider(v1k5h0gz8v,(function()local
+vxyg3t0fy={70,108,121,32,83,112,101,101,100};local _r="";for vzmyy0cfz=1,#vxyg3t0fy do _r=_r..v14m4hl96[vxyg3t0fy[vzmyy0cfz]]end;return
+_r end)(),("\80\108\97".."\121\101\114".."\95\70\108".."\121\83\112".."\101\101".."\100"),((53)-43),(54+(146)),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(v1k5h0gz8v,(function()local ve5cztzg0={78,111,67,108,105,112};local _r="";for vjh5ua7g1=1,#ve5cztzg0
+do _r=_r..v14m4hl96[ve5cztzg0[vjh5ua7g1]]end;return _r end)(),(function()local v1dm4oc4g2={80,108,97,121,101,114,95,78,111,67,108,105,112};local
+_r="";for voqtherg3=1,#v1dm4oc4g2 do _r=_r..v14m4hl96[v1dm4oc4g2[voqtherg3]]end;return _r end)(),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+local vvr4imy8w=v1fbs9i022[("\87".."\111\114".."\108\100")]v11sn7kf8q=0 von2qr11j.CreateLabel(vvr4imy8w,("\83\79\85".."\78".."\68\83"),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(vvr4imy8w,(function()local vpkzlt7g4={72,105,116,32,83,111,117,110,100};local _r="";for vg68wdmg5=1,#vpkzlt7g4
+do _r=_r..v14m4hl96[vpkzlt7g4[vg68wdmg5]]end;return _r end)(),(function()local v5znmltg6={87,111,114,108,100,95,72,105,116,83,111,117,110,100};local
+_r="";for v6n2ilrg7=1,#v5znmltg6 do _r=_r..v14m4hl96[v5znmltg6[v6n2ilrg7]]end;return _r end)(),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(vvr4imy8w,(function()local vt7f1rwg8={83,104,111,111,116,32,83,111,117,110,100};local _r="";for vfyq6w6g9=1,#vt7f1rwg8
+do _r=_r..v14m4hl96[vt7f1rwg8[vfyq6w6g9]]end;return _r end)(),(function()local vwfy4yvga={87,111,114,108,100,95,83,104,111,111,116,83,111,117,110,100};local
+_r="";for vi4e2bugb=1,#vwfy4yvga do _r=_r..v14m4hl96[vwfy4yvga[vi4e2bugb]]end;return _r end)(),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateLabel(vvr4imy8w,("\76".."\73".."\71\72\84".."\73\78".."\71"),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1 von2qr11j.CreateToggle(vvr4imy8w,("\70".."\117".."\108".."\108".."\98\114".."\105\103\104".."\116"),(function()local
+v14gzybogc={87,111,114,108,100,95,70,117,108,108,98,114,105,103,104,116};local _r="";for v4y5ur7gd=1,#v14gzybogc do _r=_r..v14m4hl96[v14gzybogc[v4y5ur7gd]]end;return
+_r end)(),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1 von2qr11j.CreateToggle(vvr4imy8w,(function()local voxsfztge={70,79,86,32,67,104,97,110,103,101,114};local
+_r="";for vvkkk99gf=1,#voxsfztge do _r=_r..v14m4hl96[voxsfztge[vvkkk99gf]]end;return _r end)(),("\87\111\114".."\108".."\100".."\95".."\70".."\79".."\86\67\104".."\97\110\103".."\101\114"),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateSlider(vvr4imy8w,(function()local v10c41wygg={87,111,114,108,100,32,70,79,86};local _r="";for vnijw6jgh=1,#v10c41wygg
+do _r=_r..v14m4hl96[v10c41wygg[vnijw6jgh]]end;return _r end)(),("\87\111".."\114\108".."\100".."\95\70\79".."\86\86\97".."\108".."\117".."\101"),(((bit32
+and bit32.bxor)or(bit and bit.bxor)or function(x,y)local r,p=0,1;while x>0 or y>0 do local a,b=x%2,y%2;if a~=b then r=r+p
+end;x=math.floor(x/2);y=math.floor(y/2);p=p*2 end;return r end)(249,197)),(math.max(161,140)-21),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(vvr4imy8w,(function()local vgskfbagi={84,105,109,101,32,67,104,97,110,103,101,114};local _r="";for
+v1vlh2c8gj=1,#vgskfbagi do _r=_r..v14m4hl96[vgskfbagi[v1vlh2c8gj]]end;return _r end)(),("\87\111\114".."\108\100".."\95\84".."\105".."\109".."\101\67".."\104".."\97".."\110\103".."\101".."\114"),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateSlider(vvr4imy8w,("\84\105".."\109".."\101"),("\87\111".."\114".."\108\100".."\95".."\84\105".."\109\101\86".."\97\108\117".."\101"),0,(math.max(27,24)-3),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+local v8t1str8x=v1fbs9i022[("\71".."\117".."\110\32\77".."\111\100".."\115")]v11sn7kf8q=0 von2qr11j.CreateLabel(v8t1str8x,("\71\85".."\78".."\32\77\79".."\68\73\70".."\73\67".."\65".."\84".."\73".."\79".."\78".."\83"),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(v8t1str8x,("\73\110\102".."\105\110\105".."\116\101".."\32\65".."\109\109\111"),(function()local v1jla59ugk={71,117,110,95,73,110,102,65,109,109,111};local
+_r="";for vynpi7mgl=1,#v1jla59ugk do _r=_r..v14m4hl96[v1jla59ugk[vynpi7mgl]]end;return _r end)(),v11sn7kf8q,v7rvsyk52);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(v8t1str8x,("\78".."\111\32\82".."\101".."\99\111\105".."\108"),(function()local v9hepj1gm={71,117,110,95,78,111,82,101,99,111,105,108};local
+_r="";for vibkkmagn=1,#v9hepj1gm do _r=_r..v14m4hl96[v9hepj1gm[vibkkmagn]]end;return _r end)(),v11sn7kf8q,v7rvsyk52);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(v8t1str8x,(function()local ve88wxxgo={82,97,112,105,100,32,70,105,114,101};local _r="";for vf9ago6gp=1,#ve88wxxgo
+do _r=_r..v14m4hl96[ve88wxxgo[vf9ago6gp]]end;return _r end)(),("\71\117\110".."\95\82\97".."\112\105".."\100\70".."\105\114\101"),v11sn7kf8q,v7rvsyk52);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateSlider(v8t1str8x,(function()local v1fanokqgq={82,97,112,105,100,32,70,105,114,101,32,83,112,101,101,100};local
+_r="";for vnbjsemgr=1,#v1fanokqgq do _r=_r..v14m4hl96[v1fanokqgq[vnbjsemgr]]end;return _r end)(),(function()local v1hnqetmgs={71,117,110,95,82,97,112,105,100,70,105,114,101,83,112,101,101,100};local
+_r="";for vqo8wiggt=1,#v1hnqetmgs do _r=_r..v14m4hl96[v1hnqetmgs[vqo8wiggt]]end;return _r end)(),0.001,0.2,v11sn7kf8q,v7rvsyk52);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(v8t1str8x,"Auto Guns (full-auto conversion)",(function()local v1c6dighgu={71,117,110,95,65,117,116,111,71,117,110,115};local
+_r="";for v19uc9qsgv=1,#v1c6dighgu do _r=_r..v14m4hl96[v1c6dighgu[v19uc9qsgv]]end;return _r end)(),v11sn7kf8q,v7rvsyk52);v11sn7kf8q=v11sn7kf8q+1
+von2qr11j.CreateToggle(v8t1str8x,("\73".."\110\115".."\116\97".."\110\116\32".."\69".."\113\117".."\105\112"),(function()local
+v1sit37ygw={71,117,110,95,73,110,115,116,97,110,116,69,113,117,105,112};local _r="";for v1picxg3gx=1,#v1sit37ygw do _r=_r..v14m4hl96[v1sit37ygw[v1picxg3gx]]end;return
+_r end)(),v11sn7kf8q,vlq0y5o3t);v11sn7kf8q=v11sn7kf8q+1 von2qr11j.CreateLabel(v8t1str8x,(function()local v1czmxhmgy={77,73,83,67};local
+_r="";for v140gnuzgz=1,#v1czmxhmgy do _r=_r..v14m4hl96[v1czmxhmgy[v140gnuzgz]]end;return _r end)(),v11sn7kf8q);v11sn7kf8q=v11sn7kf8q+1
+local vadjg9r8y=Instance.new((function()local v6dz1iqh0={84,101,120,116,66,117,116,116,111,110};local _r="";for v3mf72kh1=1,#v6dz1iqh0
+do _r=_r..v14m4hl96[v6dz1iqh0[v3mf72kh1]]end;return _r end)())vadjg9r8y.Parent=v8t1str8x vadjg9r8y.BackgroundColor3=Color3.fromRGB((66+(14)),(math.floor((150)/5)),(math.max(53,30)-23))vadjg9r8y.BorderSizePixel=0
+vadjg9r8y.Size=UDim2.new(1,-8,0,(((bit32 and bit32.bxor)or(bit and bit.bxor)or function(x,y)local r,p=0,1;while x>0 or y>0
+do local a,b=x%2,y%2;if a~=b then r=r+p end;x=math.floor(x/2);y=math.floor(y/2);p=p*2 end;return r end)(234,244)))vadjg9r8y.LayoutOrder=v11sn7kf8q
+vadjg9r8y.Font=Enum.Font.GothamBold vadjg9r8y.Text=("\82\101\115".."\116\111".."\114\101".."\32\71\117".."\110\32\68".."\101\102\97".."\117\108".."\116\115")vadjg9r8y.TextColor3=Color3.fromRGB((3*(85)),((235)-15),(math.floor(225)-5))vadjg9r8y.TextSize=((44)-32)vadjg9r8y.ZIndex=5
+local v1n17o0n8z=Instance.new(("\85".."\73\67\111".."\114\110".."\101".."\114"))v1n17o0n8z.Parent=vadjg9r8y v1n17o0n8z.CornerRadius=UDim.new(0,4)vadjg9r8y.MouseButton1Click:Connect(function()von2qr11j.RestoreGunMods()print("[Arsenal] Gun attributes restored")end)return
+vxfcfzj84 end RunService.RenderStepped:Connect(function()if not v1k1113b1o.Visuals_Enabled then for v1wrg6v290 in pairs(v1xyp0gk1p)do
+von2qr11j.CleanESP(v1wrg6v290)end return end for vn1at0w91,vf92atw92 in ipairs(Players:GetPlayers())do if vf92atw92==v11391yq1l
+then continue end local v1ppqnoi93=von2qr11j.GetCharacter(vf92atw92)if not v1ppqnoi93 or not von2qr11j.GetHRP(vf92atw92)then
+continue end if v1k1113b1o.Visuals_TeamCheck and not von2qr11j.IsEnemy(vf92atw92)then von2qr11j.CleanESP(vf92atw92)continue
+end if not v1xyp0gk1p[vf92atw92]then von2qr11j.CreateESP(vf92atw92)end end von2qr11j.UpdateESP()end)RunService.RenderStepped:Connect(function()von2qr11j.UpdateTracers()von2qr11j.UpdateFOVCircle()if
+vvdnkgc1r and v1wlfsvz1s>0 and os.clock()>v1wlfsvz1s then vvdnkgc1r.Visible=false v1wlfsvz1s=0 end end)RunService.RenderStepped:Connect(function(v1iaf9t894)if
+not v1k1113b1o.Legit_Aimbot then return end if not UserInputService:IsKeyDown(v1k1113b1o.Legit_HoldKey)then return end local
+vg1vcmx95,v1046d7w96=nil,math.huge local vlcod9d97=Vector2.new(v1e7golb1k.ViewportSize.X/2,v1e7golb1k.ViewportSize.Y/2)for
+v6fcym598,vs1i5nz99 in ipairs(Players:GetPlayers())do if vs1i5nz99==v11391yq1l then continue end if v1k1113b1o.Legit_TeamCheck
+and not von2qr11j.IsEnemy(vs1i5nz99)then continue end local v1g10hq49a=von2qr11j.GetCharacter(vs1i5nz99)if not v1g10hq49a
+then continue end local vjp0hqf9b=v1g10hq49a:FindFirstChild((function()local v10ubdwsh2={72,117,109,97,110,111,105,100};local
+_r="";for v1cgo6m0h3=1,#v10ubdwsh2 do _r=_r..v14m4hl96[v10ubdwsh2[v1cgo6m0h3]]end;return _r end)())if not vjp0hqf9b or vjp0hqf9b.Health<=0
+then continue end local vdnypuj9c=von2qr11j.GetBestTargetPart(vs1i5nz99)if not vdnypuj9c then continue end local vh9ajue9d,vl9mmgv9e=v1e7golb1k:WorldToViewportPoint(vdnypuj9c.Position)if
+not vl9mmgv9e then continue end local v1psjvca9f=(Vector2.new(vh9ajue9d.X,vh9ajue9d.Y)-vlcod9d97).Magnitude if v1psjvca9f<v1k1113b1o.Legit_AimbotFOV/2
+and v1psjvca9f<v1046d7w96 then if v1k1113b1o.Legit_VisibleCheck and not von2qr11j.IsVisible(vdnypuj9c)then continue end v1046d7w96=v1psjvca9f
+vg1vcmx95=vdnypuj9c end end if vg1vcmx95 then local v3ocrao9g=v1e7golb1k.CFrame.Position local v1ybwm129h=CFrame.lookAt(v3ocrao9g,vg1vcmx95.Position)local
+vsn2dvt9i=math.clamp(v1k1113b1o.Legit_Smoothness*(v1iaf9t894*(37+(23))),0,1)v1e7golb1k.CFrame=v1e7golb1k.CFrame:Lerp(v1ybwm129h,vsn2dvt9i)end
+end)RunService.RenderStepped:Connect(function()von2qr11j.RunRageTriggerbot()von2qr11j.RunSilentAimTriggerbot()von2qr11j.RunLegitTriggerbot()von2qr11j.RunKillAura()if
+v1k1113b1o.Rage_KillAll and not v1k1113b1o.MenuOpen and not v1okp8bw25 then von2qr11j.RunKillAll()end end)RunService.Heartbeat:Connect(function(v1cfu5ox9j)vndvylq6s()von2qr11j.ApplyNoClip()von2qr11j.ApplyFly()von2qr11j.ApplyWorld()vlq0y5o3t()von2qr11j.RunGunMods(v1cfu5ox9j)end)Players.PlayerAdded:Connect(function(vpppnv29k)task.wait(1)if
+v1k1113b1o.Visuals_Enabled then von2qr11j.CreateESP(vpppnv29k)end end)Players.PlayerRemoving:Connect(function(v1g1akgv9l)von2qr11j.CleanESP(v1g1akgv9l)end)UserInputService.InputBegan:Connect(function(vb314s69m,v1mzi19l9n)if
+v1mzi19l9n then return end if vb314s69m.KeyCode==v1k1113b1o.Keybind then v1k1113b1o.MenuOpen=not v1k1113b1o.MenuOpen if v10ypm3c1z
+then v10ypm3c1z.Visible=v1k1113b1o.MenuOpen end end end)von2qr11j.BuildGUI()vndvylq6s()if v1k1113b1o.Rage_SilentAim then
+von2qr11j.InstallSilentAimHook()end
